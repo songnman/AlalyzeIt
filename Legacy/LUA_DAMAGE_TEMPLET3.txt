@@ -1,0 +1,5129 @@
+﻿m_dicDamageTempletStrID =
+{
+--*크로스로드 리메이크
+	{--* 보스 주시윤 스킬1
+		m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_BASIC_JOO_SHI_YOON_SKILL1",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		m_fStunTime               = 1.5,
+		m_StunIgnoreStyleType     = {"NUST_MECHANIC"},
+		m_BackSpeedX              = 700,
+		
+		m_fCameraCrashGap         = 0,
+		m_fCameraCrashTime        = 0.5,
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_BLADE_BIG_02",
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_BASIC_NEPHILIM_MINOR_PATTERN2",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		
+		m_BackSpeedJumpY          = 300,
+		m_ReAttackCount           = 16,
+		m_fReAttackGap            = 2/30,
+		
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_BASIC_NEPHILIM_MINOR_PATTERN2_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		
+		m_ReAttackCount           = 1,
+		m_fReAttackGap            = 0.07,
+		
+		m_BackSpeedJumpY          = 1000,
+		m_BackSpeedX              = 2000,
+		
+		m_HitEffect               = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_BASIC_NEPHILIM_MINOR_PHASE_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+		
+		m_BackSpeedX              = 0,
+		
+		m_fStopTimeDef            = 0.3,
+		m_fStopReserveTimeDef     = 0.05,
+		
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_02",
+		m_HitEffect               = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_BASIC_NEPHILIM_MINOR_PHASE_ATTACK1_END",
+		m_ReActType               = "NRT_NO_ACTION",
+		
+		m_BackSpeedX              = 200,
+		
+		m_HitSoundName            = "",
+		m_HitEffect               = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{--* 네피림 특수기 디버프
+		m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_BASIC_NEPHILIM_MINOR_PATTERN1_SKILL1",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		m_DefenderBuff            = "DEBUFF_NKM_MONSTER_BOSS_BASIC_NEPHILIM_MINOR_PATTERN1_SKILL1",
+	},
+--*매지어
+	{--* 매지어 디버프
+		m_DamageTempletName = "DT_NKM_MOB_NORMAL_HALLOWEEN_WIZARD_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 70,
+	
+		m_HitSoundName 	= "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect	 	= "AB_FX_HIT_GUN_A_RED",
+		m_HitEffectAir	= "AB_FX_HIT_GUN_A_RED",
+		m_DefenderBuff  = "DEBUFF_NKM_MOB_NORMAL_HALLOWEEN_WIZARD_ATTACK1",
+		
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.2,
+	},
+--*뒤틀린 마녀
+	{--* 뒤틀린 마녀 하이퍼 스킬 (밀기)
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_HALLOWEEN_WIZARD_HYPER1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		
+		m_BackSpeedX              = 3000,
+		m_BackSpeedJumpY          = 0,
+
+		m_ReAttackCount           = 0,
+		m_fReAttackGap            = 0,
+	},
+	{--* 마녀의 장벽 넘어짐
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_HALLOWEEN_WIZARD_SUMMON_HYPER1",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		
+		m_BackSpeedJumpY          = 1500,
+		
+		m_HitEffect               = "AB_FX_HIT_SLASH_B_RED",
+		
+	},
+	{--* 뒤틀린 마녀 스킬 1
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_HALLOWEEN_WIZARD_SKILL1_START",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 15/30,
+		m_BackSpeedX              = 1000,
+		m_fStopReserveTimeDef     = 13/30,
+		m_fStopTimeDef            = 2/30,
+		m_DefenderBuff            = "DEBUFF_NKM_MOB_BOSS_HALLOWEEN_WIZARD_ATTACK1",
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+		m_HitEffectAir            = "AB_FX_HIT_GUN_A_RED",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_fLocalVol               = 0.5,
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_HALLOWEEN_WIZARD_SKILL1_LOOP",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		
+		m_ReAttackCount           = 3,
+		m_fReAttackGap            = 10/30,
+		m_BackSpeedX              = -800,
+		m_fStopReserveTimeDef     = 7/30,
+		m_fStopTimeDef            = 3/30,
+		m_DefenderBuff            = "DEBUFF_NKM_MOB_BOSS_HALLOWEEN_WIZARD_ATTACK1",
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+		m_HitEffectAir            = "AB_FX_HIT_GUN_A_RED",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_fLocalVol               = 0.5,
+		
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_HALLOWEEN_WIZARD_SKILL1_END",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		m_DefenderBuff            = "DEBUFF_NKM_MOB_BOSS_HALLOWEEN_WIZARD_ATTACK1",
+		
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 1200,
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+		m_HitEffectAir            = "AB_FX_HIT_GUN_A_RED",
+	},
+--*보스 할로윈 신디
+	{--*보스 신디 스킬
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_HALLOWEEN_VATICAN_CINDY_SKILL1",
+		m_ReActType 			  = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_ReAttackCount           = 3,
+		m_fReAttackGap 	          = 0.15,
+		
+		m_BackSpeedX              = 150,
+
+		m_fCameraCrashGap         = 10,
+		m_fCameraCrashTime        = 0.2,
+
+		m_listNKMEventBuff =
+		{
+			{
+				m_bAnimTime         = true,
+				m_fEventTime        = 1/30,
+				m_BuffStrID			= "BUFF_NKM_MOB_BOSS_HALLOWEEN_VATICAN_CINDY",
+			},
+		},
+
+		m_HitSoundName			  = "FX_COMBAT_ALL_SWORD_SLASH_SMALL_07",
+		m_HitEffect 		      = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--*보스 할로윈 레지나
+	{--*보스 레지나 패시브
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_HALLOWEEN_ESPR_FROZEN_PASSIVE",
+		m_ReActType 			= "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX		= 2000, 
+
+		m_fStopTimeDef			= 0.1,
+		m_fStopReserveTimeDef	= 0.05,
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_BLUE", 
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_ESPR_FROZEN_PASSIVE",
+			},
+		},
+		m_fStunTime				= 5.0,
+		m_StunAllowStyleType	= {"NUST_MECHANIC"},
+	},
+	{--* 보스 레지나 스킬 1
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_HALLOWEEN_ESPR_FROZEN_SKILL1",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX		= 1200, 
+		m_BackSpeedJumpY	= 1300,
+
+		m_HitEffect 		= "AB_FX_HIT_SLASH_A_BLUE", 
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_NKM_MOB_BOSS_HALLOWEEN_ESPR_FROZEN",
+			},
+		},
+
+		m_fStunTime				= 5.0,
+		m_StunAllowStyleType	= {"NUST_MECHANIC"},
+	},
+	{--* 보스 레지나 하이퍼 시작
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_HALLOWEEN_ESPR_FROZEN_HYPER1",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_fStopTimeDef			= 0.2,
+		m_fStopReserveTimeDef	= 0.05,
+
+		m_ReAttackCount		= 3,
+		m_fReAttackGap		= 0.1,
+
+		m_BackSpeedX		= 300, 
+		m_BackSpeedJumpY	= 800,
+
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_BLUE", 
+	},
+	{--* 보스 레지나 하이퍼 종료
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_HALLOWEEN_ESPR_FROZEN_HYPER1_END",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX		= 800, 
+		m_BackSpeedJumpY	= 1400,
+
+		m_HitEffect 		= "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_ESPR_FROZEN_HYPER",
+			},
+		},
+		m_fStunTime				= 5.0,
+		m_StunAllowStyleType	= {"NUST_MECHANIC"},
+	},
+--* 보스 잉그리드
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_HALLOWEEN_STREGA_INGRID_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+
+		-- m_fCameraCrashGap 	= 0,
+		-- m_fCameraCrashTime 	= 0.1,
+		
+		m_BackSpeedX = 50,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_HALLOWEEN_STREGA_INGRID_ATTACK2",
+		m_ReActType = "NRT_NO_ACTION",
+
+		-- m_fCameraCrashGap 	= 0,
+		-- m_fCameraCrashTime 	= 0.1,
+		
+		m_BackSpeedX = 50,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_HALLOWEEN_STREGA_INGRID_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		-- m_fCameraCrashGap 	= 10,
+		-- m_fCameraCrashTime 	= 0.2,
+		
+		m_BackSpeedX = 300,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_HALLOWEEN_STREGA_INGRID_SKILL2",
+		m_ReActType = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		m_DefenderBuff	= "DEBUFF_NKM_MOB_BOSS_HALLOWEEN_WIZARD_ATTACK1",
+
+		-- m_fCameraCrashGap 	= 10,
+		-- m_fCameraCrashTime 	= 0.2,
+		
+		m_BackSpeedX = -1300,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+		
+	},
+	{--* 잉그리드 페이즈 스킬
+	m_DamageTempletName = "DT_NKM_MOB_BOSS_HALLOWEEN_STREGA_INGRID_PHASE_SKILL1",
+	m_ReActType 		= "NRT_NO_ACTION",
+	m_CrashSuperArmorLevel 	= "NSAL_SKILL",
+	m_BackSpeedX = -300,
+	
+	-- m_fCameraCrashGap 	= 20,
+	-- m_fCameraCrashTime 	= 0.5,
+	
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_HALLOWEEN_STREGA_INGRID_HYPER1",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel 	= "NSAL_HYPER",
+		
+		m_BackSpeedX	    = 800,
+		m_BackSpeedJumpY	= 1300,
+		m_ReAttackCount     = 3,
+		m_fReAttackGap    	= 0.1,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_HALLOWEEN_STREGA_INGRID_HYPER1_AIR",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_ReAttackCount 	= 4,
+		m_fReAttackGap 		= 0.1,
+		m_BackSpeedJumpY 	= 200,
+		
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime	= 0.4,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{  --* 오래된 공포 PV (새 죽이기)
+	m_DamageTempletName       = "DT_NKM_MOB_BOSS_HALLOWEEN_ESPR_FROZEN_SUMMON_PV_CA_SKILL1_AIR",
+	m_ReActType               = "NRT_DAMAGE_A",
+	m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+	m_ReAttackCount           = 3,
+	m_fReAttackGap            = 5/30,
+	m_fInstantKillHPRate      = 1.01,
+
+	m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+	m_HitEffectAir            = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--* 오래된 공포 스킬1 (쿨감제거)
+	m_DamageTempletName       = "DT_NKM_MOB_BOSS_HALLOWEEN_ESPR_FROZEN_SUMMON_PV_CA_SKILL1",
+	m_ReActType               = "NRT_DAMAGE_A",
+	m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+	m_BackSpeedX              = 350,
+	m_BackSpeedJumpY          = 0,
+	
+	m_ReAttackCount           = 2,
+	m_fReAttackGap            = 7/30,
+	
+	m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+	m_HitEffectAir            = "AB_FX_HIT_GUN_A_RED",
+	},
+--* 메이드 2호 (리코리스)
+	{	--* 일반 공격
+		m_DamageTempletName = "DT_NKM_UNIT_MAID_C_SPEAR_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 100,		
+		
+		-- m_fCameraCrashGap = 0,
+		-- m_fCameraCrashTime = 0.2,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+	},
+	{   --*스킬공격
+		m_DamageTempletName       = "DT_NKM_UNIT_MAID_C_SPEAR_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 200,
+
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.2,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_B_BLUE",
+	},
+	{	--* 하이퍼 시작
+		m_DamageTempletName = "DT_NKM_UNIT_MAID_C_SPEAR_HYPER1",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_BackSpeedX              = 350,
+		m_BackSpeedJumpY          = 0,
+		
+		m_ReAttackCount = 2,
+		m_fReAttackGap 	= 0.2,
+
+		-- m_fCameraCrashGap = 20,
+		-- m_fCameraCrashTime = 0.2,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{	--* 하이퍼 종료
+		m_DamageTempletName = "DT_NKM_UNIT_MAID_C_SPEAR_HYPER1_END",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_BackSpeedJumpY = 1600,
+		m_BackSpeedX = 0,
+		
+		--m_ReAttackCount = 3,
+		--m_fReAttackGap 	= 0.2,
+
+		-- m_fCameraCrashGap = 20,
+		-- m_fCameraCrashTime = 0.2,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--?메이드 이벤트 (리코리스 하드모드 전용)
+	{   --*스킬공격 (넉백 더 길게)
+	m_DamageTempletName       = "DT_NKM_MOB_BOSS_MAID_MAID_C_SPEAR_SKILL1",
+	m_ReActType               = "NRT_DAMAGE_A",
+	m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+	m_BackSpeedX              = 600,
+
+	m_ReAttackCount = 2,
+	m_fReAttackGap 	= 0.1,
+
+	m_HitEffect               = "AB_FX_HIT_SLASH_B_BLUE",
+	},
+	{	--* 하이퍼 시작
+	m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_C_SPEAR_HYPER1",
+	m_ReActType = "NRT_DAMAGE_A",
+	m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+	m_BackSpeedX              = 350,
+	m_BackSpeedJumpY          = 0,
+
+	m_ReAttackCount = 2,
+	m_fReAttackGap 	= 0.2,
+
+	-- m_fCameraCrashGap = 20,
+	-- m_fCameraCrashTime = 0.2,
+
+	m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{	--* 하이퍼 종료 (배리어 제거 추가)
+	m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_C_SPEAR_HYPER1_END",
+	m_ReActType = "NRT_DAMAGE_UP",
+	m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+	m_BackSpeedJumpY = 1600,
+	m_BackSpeedX = 0,
+
+	m_bCrashBarrier		= true,
+
+	m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--?메이드 릴리 (이벤트 보스용)
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_C_MASK_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+
+		m_ReAttackCount	= 3,
+		m_fReAttackGap 	= 0.1,
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE",
+		m_HitEffectAir 	= "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_C_MASK_PASSIVE_START",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 0.2,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_PURPLE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_C_MASK_PASSIVE",
+		m_ReActType = "NRT_NO_ACTION",
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_PURPLE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_BOSS_MAID_MASK_PASSIVE",
+			},
+			-- {
+			-- 	m_HitBuff = "BUFF_BOSS_MAID_MASK_DISPEL",
+			-- },
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_C_MASK_SKILL1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 0,
+
+		m_HitEffect		= "AB_FX_HIT_GUN_A_PURPLE",
+		m_HitEffectAir 	= "AB_FX_HIT_GUN_A_PURPLE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_BOSS_MAID_MASK_SKILL1",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_C_MASK_HYPER1",
+		m_ReActType = "NRT_DAMAGE_A",
+
+		m_HitEffect		= "AB_FX_HIT_GUN_A_PURPLE",
+		m_HitEffectAir 	= "AB_FX_HIT_GUN_A_PURPLE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_C_MASK_HYPER1_END",
+		m_ReActType = "NRT_DAMAGE_UP",
+
+		m_BackSpeedJumpY	= 1400,
+
+		m_HitEffect			= "AB_FX_HIT_GUN_A_PURPLE",
+		m_HitEffectAir 		= "AB_FX_HIT_GUN_A_PURPLE",
+
+		m_listDefenderHitBuff =
+		{
+			-- {
+			-- 	m_HitBuff = "DEBUFF_BOSS_MAID_MASK_HYPER1",
+			-- },
+			{
+				m_HitBuff = "DEBUFF_BOSS_MAID_MASK_HYPER2",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_C_MASK_S_HYPER1_END",
+		m_ReActType = "NRT_DAMAGE_UP",
+
+		m_BackSpeedJumpY	= 1400,
+
+		m_HitEffect			= "AB_FX_HIT_GUN_A_PURPLE",
+		m_HitEffectAir 		= "AB_FX_HIT_GUN_A_PURPLE",
+
+		m_listDefenderHitBuff =
+		{
+			-- {
+			-- 	m_HitBuff = "DEBUFF_BOSS_MAID_MASK_HYPER1",
+			-- },
+			{
+				m_HitBuff = "DEBUFF_BOSS_MAID_MASK_HYPER2",
+			},
+		},
+	},
+--?메이드 이벤트 (베로니카 챌린지)
+	{--*! 테스트용 스킬
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_LEADER_SKILL1",
+		m_ReActType = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_fCameraCrashTime = 0.5,
+
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+
+		m_NKMKillFeedBack	=
+		{
+			m_fHyperSkillCoolTimeAdd = -900,
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_S_LEADER_S_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 800,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_S_LEADER_S_ATTACK2",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 800,
+
+		m_fCameraCrashGap 	= 2,
+		m_fCameraCrashTime 	= 0.25,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_S_LEADER_S_SKILL1",
+		m_ReActType 	= "NRT_DAMAGE_CATCH",
+
+		m_fCameraCrashGap 	= 2,
+		m_fCameraCrashTime 	= 0.25,
+
+		m_HitEffect		= "AB_FX_HIT_SLASH_B_RED",
+
+		m_NKMKillFeedBack	=
+		{
+			m_fHyperSkillCoolTimeAdd = -900,
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_S_LEADER_S_SKILL1_END",
+		m_ReActType 	= "NRT_DAMAGE_DOWN",
+		m_BackSpeedX 	= 600,
+
+		m_fCameraCrashGap 	= 5,
+		m_fCameraCrashTime 	= 0.5,
+
+		m_HitEffect		= "AB_FX_HIT_GUN_A_ORANGE",
+
+		m_NKMKillFeedBack	=
+		{
+			m_fHyperSkillCoolTimeAdd = -900,
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_S_LEADER_S_SKILL2",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 800,
+
+		m_fCameraCrashGap 	= 2,
+		m_fCameraCrashTime 	= 0.25,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_MAID_MAID_S_LEADER_S_SKILL2_END",
+		m_ReActType 	 = "NRT_DAMAGE_UP",
+		m_BackSpeedX 	 = 1200,
+		m_BackSpeedJumpY = 600,
+
+		m_fCameraCrashGap 	= 5,
+		m_fCameraCrashTime 	= 0.5,
+
+		m_HitEffect		= "AB_FX_HIT_GUN_A_ORANGE",
+
+		m_NKMKillFeedBack	=
+		{
+			m_fHyperSkillCoolTimeAdd = -900,
+		},
+	},
+	{--? 그레이리프 평타
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_MAID_MASK_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 150,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--*보급 작전
+	{--* 건십 평타1
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUPPLY_STATE_GUNSHIP_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 200,
+		
+	--	m_HitSoundName = "FX_COMBAT_ALL_ONESHOT_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_RED",
+		
+		-- m_fCameraCrashGap = 0,
+		-- m_fCameraCrashTime = 0.2,
+	},
+	{--* 건십 평타2
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUPPLY_STATE_GUNSHIP_ATTACK2",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 300,
+		
+		m_fCameraCrashGap = 2,
+		m_fCameraCrashTime = 0.3,
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--* 하운드 어택1
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUPPLY_SL_TANK_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 700,
+
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.15,
+		--m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		m_bHitEffectLand = true,
+	},
+	{--* 하운드 스킬1
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUPPLY_SL_TANK_SKILL1",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_BackSpeedX = 1500,
+
+		m_fCameraCrashGap = 10,
+		m_fCameraCrashTime = 0.3,
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* 나유빈 PV
+	{--? 블래스터 일반 공격
+		m_DamageTempletName       = "DT_NKM_MOB_NORMAL_SIXWING_NA_YUBIN_BASIC_BLASTER_PV_CA_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 50,
+
+		m_ReAttackCount = 2,
+		m_fReAttackGap 	= 0.2,
+		
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--? 블래스터 일반 공격
+		m_DamageTempletName       = "DT_NKM_MOB_NORMAL_SIXWING_NA_YUBIN_BASIC_BLASTER_PV_CA_ATTACK2",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 50,
+
+		m_ReAttackCount = 2,
+		m_fReAttackGap 	= 0.2,
+		
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName            = "FX_COMBAT_ALL_ENERGY_ATTACK_BIG",
+	},
+	{	--* PV 스피라 스킬2
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_SIXWING_NA_YUBIN_TRANS_SHADOW_MOVE_PV_CA_SKILL2",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		
+		m_BackSpeedX              = 150,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 0.2,
+		
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+	},
+	{   --* 하이퍼1
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_SIXWING_NA_YUBIN_TRANS_SHADOW_MOVE_PV_CA_HYPER1",
+		m_ReActType               = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		
+		m_BackSpeedX              = 500,
+		m_ReAttackCount           = 0,
+		m_fReAttackGap            = 0,
+		m_fStopReserveTimeDef     = 0.2,
+		m_fStopTimeDef            = 1,
+		
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect               = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{   --* 하이퍼1 끝
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_SIXWING_NA_YUBIN_TRANS_SHADOW_MOVE_PV_CA_HYPER1_END",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		
+		m_ReAttackCount           = 8,
+		m_fReAttackGap            = 0.1,
+		
+		m_BackSpeedJumpY          = 500,
+		m_BackSpeedX              = 100,
+		
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+	},
+	{	--* PV 스피라 스킬2
+	m_DamageTempletName       = "DT_NKM_MOB_BOSS_SIXWING_NA_YUBIN_TRANS_SHADOW_MOVE_PV_CA_PHASE",
+	m_ReActType               = "NRT_DAMAGE_A",
+	m_CrashSuperArmorLevel    = "NSAL_SKILL",
+	
+	m_BackSpeedX              = 150,
+	m_ReAttackCount           = 2,
+	m_fReAttackGap            = 0.1,
+	
+	m_HitSoundName            = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+	m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+	},
+	--* 보급작전 어보미네이션
+	{   --* 공격1
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_SUPPLY_BASIC_ABOMINATION_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_INVALID",
+		
+		m_BackSpeedX              = 500,
+		m_BackSpeedJumpY          = 0,
+		m_ReAttackCount           = 0,
+		m_fReAttackGap            = 0,
+		
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+
+	},
+	{   --* 공격2
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_SUPPLY_BASIC_ABOMINATION_ATTACK2",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_INVALID",
+		
+		m_BackSpeedX              = 100,
+		m_BackSpeedJumpY          = 0,
+		m_ReAttackCount           = 0,
+		m_fReAttackGap            = 0,
+		
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+
+	},
+	{   --* 공격2(침식체 트리거)
+	m_DamageTempletName       = "DT_NKM_MOB_BOSS_SUPPLY_BASIC_ABOMINATION_DUMMY",
+	m_ReActType               = "NRT_NO_ACTION",
+	m_CrashSuperArmorLevel    = "NSAL_INVALID",
+	
+	m_BackSpeedX              = 0,
+	m_BackSpeedJumpY          = 0,
+	m_ReAttackCount           = 0,
+	m_fReAttackGap            = 0,
+	
+	m_listDefenderHitBuff =
+	{
+		{
+			m_HitBuff = "DEBUFF_NKM_MOB_BOSS_SUPPLY_ABOMINATION_TRIGGER",
+		},
+	},
+	},
+	{   --* 공격2(침식체 킬러)
+	m_DamageTempletName       = "DT_NKM_MOB_BOSS_SUPPLY_BASIC_ABOMINATION_KILLCORRUP",
+	m_ReActType               = "NRT_NO_ACTION",
+	m_CrashSuperArmorLevel    = "NSAL_INVALID",
+	
+	m_BackSpeedX              = 0,
+	m_BackSpeedJumpY          = 0,
+	m_ReAttackCount           = 0,
+	m_fReAttackGap            = 0,
+
+	m_fInstantKillHPRate      = 1.01,
+	},
+	{   --* 스킬1
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_SUPPLY_BASIC_ABOMINATION_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 0,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 3/30,
+		
+		m_HitEffect               = "AB_FX_HIT_SLASH_B_RED",
+
+	},
+	{   --* 스킬2
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_SUPPLY_BASIC_ABOMINATION_SKILL2",
+		m_ReActType               = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		
+		m_BackSpeedX              = 500,
+		m_BackSpeedJumpY          = 0,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 3/30,
+		
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+
+	},
+	{   --* 하이퍼1
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_SUPPLY_BASIC_ABOMINATION_HYPER1",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		
+		m_BackSpeedX              = 2500,
+		m_BackSpeedJumpY          = 1000,
+		m_ReAttackCount           = 0,
+		m_fReAttackGap            = 0,
+		
+		m_HitEffect               = "AB_FX_HIT_GUN_A_ORANGE",
+
+	},
+	{   --* 패턴1
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_SUPPLY_BASIC_ABOMINATION_PATTERN1",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_NO",
+		
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 0,
+		m_ReAttackCount           = 1,
+		m_fReAttackGap            = 10/30,
+		
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+		
+	},
+	{   --* 스킬1
+	m_DamageTempletName       = "DT_NKM_MOB_BOSS_SUPPLY_BASIC_ABOMINATION_PASSIVE",
+	m_ReActType               = "NRT_DAMAGE_A",
+	m_CrashSuperArmorLevel    = "NSAL_SKILL",
+	
+	m_BackSpeedX              = 0,
+	m_BackSpeedJumpY          = 0,
+	m_ReAttackCount           = 3,
+	m_fReAttackGap            = 5/30,
+	
+	m_HitEffect               = "AB_FX_HIT_SLASH_B_RED",
+	},
+	{--* 보급작전용 침식수 열매
+		m_DamageTempletName = "DT_NKM_MOB_NORMAL_SUPPLY_BASIC_THROWN_S_ATTACK1",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_NO",
+
+		m_BackSpeedX              = 100,
+		m_BackSpeedJumpY          = 0,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 3/30,
+
+		m_HitSoundName = "FX_COMBAT_ALL_EXPLOSION_ATTACK_BIG_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 컨소시엄 협력전 (데몰리션 웜)
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 250,
+
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_ATTACK2",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 300,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 2단계 도트뎀
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_ATTACK2_2nd",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 300,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_GUILD_BOSS_DOT_FIRE",
+			},
+		},
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 3단계 도트뎀 + 공속 저하
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_ATTACK2_3rd",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 300,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_GUILD_BOSS_DOT_FIRE",
+			},
+			{
+				m_HitBuff = "DEBUFF_MOB_GUILD_BOSS_ATTACK_SPEED_RATE",
+			},
+		},
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 평타 강한 공격
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_ATTACK3",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 800,
+
+		{
+			m_HitBuff = "DEBUFF_ROI_PASSIVE_LV5",
+		},
+
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--? 턴할때 1차 타격
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_ATTACK_TURN1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 250,
+
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--? 턴 이후, 2차 타격
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_ATTACK_TURN2",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 400,
+
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_ATTACK1_AIR",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 450,
+
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--? 3단계 공중 광역 레이져
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_ATTACK2_AIR",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 500,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_GUILD_BOSS_DOT_FIRE",
+			},
+		},
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 기본 포효
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_SKILL1",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		m_BackSpeedX = 900,
+
+		m_ReAttackCount           = 1,
+		m_fReAttackGap            = 0,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 2단계 쿨타임 증가
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_SKILL1_COOL",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		m_BackSpeedX = 900,
+
+		m_ReAttackCount           = 1,
+		m_fReAttackGap            = 0,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_GUILD_BOSS_ATK",
+			},
+		},
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 스킬2 물리딜
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_SKILL2_START",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 500,
+		m_ReAttackCount           = 0,
+		m_fReAttackGap            = 0,
+		
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 톱날 딜
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_SKILL2",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		m_BackSpeedX = 400,
+
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 0.3,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 2단계 배리어 삭제 (방어력 감소로 변경)
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_SKILL2_BARRIER",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		m_BackSpeedX = 400,
+
+		-- m_bCrashBarrier           = true,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_GUILD_BOSS_DEF",
+				m_HitBuffBaseLevel = 1,
+			},
+		},
+
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 0.3,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 스킬3 레이져 딜
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_SKILL3",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		m_BackSpeedX = 0,
+		m_BackSpeedJumpY	= 600,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--! 스킬3 레이져 딜 (7단계용)
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_SKILL3_HARD",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		m_BackSpeedX = 0,
+		m_BackSpeedJumpY	= 600,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 하이퍼 직접 타격
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_HYPER_SKILL1",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		m_BackSpeedX = 300,
+
+		m_ReAttackCount           = 3,
+		m_fReAttackGap            = 0.3,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 하이퍼 마그마 딜
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_HYPER_SKILL1_LAVA",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 0,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--? 돌진 하이퍼 1타
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_HYPER_SKILL2_LOOP",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SUPER",
+		m_BackSpeedX = 5000,
+		m_BackSpeedJumpY	= 1500,
+
+		m_listAttackerHitBuff	=
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_GUILD_BOSS_HYPER2",
+				m_HitBuffBaseLevel = 1,
+				m_HitBuffAddLVBySkillLV = 1,
+			},
+		},
+
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_SMASH_BIG_02",
+		m_HitEffect               = "AB_FX_MOB_BOSS_BASIC_GUILD_HYPER2_HIT",
+	},
+	{--? 돌진 하이퍼 (고난이도용)
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_HYPER_SKILL2_LOOP_HARD",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SUPER",
+		m_BackSpeedX = 5000,
+		m_BackSpeedJumpY	= 1500,
+
+		m_listAttackerHitBuff	=
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_GUILD_BOSS_HYPER2_HARD",
+				m_HitBuffBaseLevel = 1,
+				m_HitBuffAddLVBySkillLV = 1,
+			},
+		},
+
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_SMASH_BIG_02",
+		m_HitEffect               = "AB_FX_MOB_BOSS_BASIC_GUILD_HYPER2_HIT",
+	},
+	{--? 돌진 하이퍼 3타 (루프 종료)
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_HYPER_SKILL2_LOOP_END",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SUPER",
+		m_BackSpeedX = 5000,
+		m_BackSpeedJumpY	= 1500,
+
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_SMASH_BIG_02",
+		m_HitEffect               = "AB_FX_MOB_BOSS_BASIC_GUILD_HYPER2_HIT",
+		m_AttackerStateChange     = "USN_HYPER_SKILL2_CANCEL",
+	},
+	{--? 돌진 하이퍼 성공 (게임오버)
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_HYPER_SKILL2_END_1",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SUPER",
+
+		m_BackSpeedJumpY	= 1500,
+
+		-- m_fInstantKillHPRate      = 2.1,
+
+		m_HitEffect               = "AB_FX_MOB_BOSS_BASIC_GUILD_HYPER2_HIT",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_GUILD_BOSS_STUN_DISPEL",
+			},
+		},
+	},
+	{--! 사양 변경으로 안쓰는 것
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_HYPER_SKILL2_END_2",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 0,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{--? 돌진 전, 넉백&스턴(메카 제외)
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_BASIC_GUILD_HYPER_SKILL1_STUN",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SUPER",
+		m_BackSpeedX = 5000,
+		m_BackSpeedJumpY	= 1000,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_GUILD_BOSS_STUN",
+			},
+		},
+
+		m_ReAttackCount           = 1,
+		m_fReAttackGap            = 0.0,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--* 협력전 던전 디버프
+	{   --* 협력전 던전 지속 데미지 1%
+		m_DamageTempletName       = "DT_BC_GUILD_DUNGEON_S01_BATTLE_05_N",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 0,
+
+		m_HitEffect               = "AB_FX_hit_c_gunpowder",
+		m_HitEffectAir            = "AB_FX_hit_c_gunpowder",
+	},
+	{   --* 협력전 던전 지속 데미지 3%
+		m_DamageTempletName       = "DT_BC_GUILD_DUNGEON_S01_BATTLE_05_H",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 0,
+
+		m_HitEffect               = "AB_FX_hit_c_gunpowder",
+		m_HitEffectAir            = "AB_FX_hit_c_gunpowder",
+	},
+	{   --* 협력전 던전 지속 데미지 5%
+		m_DamageTempletName       = "DT_BC_GUILD_DUNGEON_S01_BATTLE_05_S",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 0,
+
+		m_HitEffect               = "AB_FX_hit_c_gunpowder",
+		m_HitEffectAir            = "AB_FX_hit_c_gunpowder",
+	},
+	{	--* EP6 광폭 서머너
+		m_DamageTempletName = "DT_NKM_MOB_NORMAL_EP6_SUMMONER_MAD_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 0,
+		
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_NORMAL_EP6_SUMMONER_HEAL",
+			},
+		},
+
+		m_HitSoundName 	= "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect	 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+	{	--* EP6 광폭 
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP6_BEAST_RANGE_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 300,
+		m_BackSpeedJumpY          = 1200,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_02",
+
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP6_BEAST_RANGE_MIST",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 0,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_EP6_BEAST_RANGE_MAD_POISON",
+			},
+		},
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP6_BEAST_BUILD_MOVE_MAD_SKILL1",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = -300,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_EP6_BEAST_BUILD_MOVE_MAD_NOCAST",
+			},
+		},
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_02",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP6_BEAST_BUILD_MOVE_MAD_HYPER1_START",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 300,
+		m_BackSpeedJumpY          = 1000,
+		
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_02",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP6_BEAST_BUILD_MOVE_MAD_HYPER1",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = -300,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_EP6_BEAST_BUILD_MOVE_MAD_SILENCE",
+			},
+		},
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_02",
+	},
+--*EP6 네르비에 (이동형)
+	{--* 네르비에 부활 공격
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP6_MINISTRA_MOVE_REPAIR",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 250,
+		m_BackSpeedJumpY          = 300,
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_PURPLE",
+	},
+	{--* 페이즈 변경 후, 공격
+		m_DamageTempletName       = "DT_MOB_BOSS_EP6_MINISTRA_TRANS_MOVE_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_fStunTime               = 1.5,
+		m_StunIgnoreStyleType     = {"NUST_MECHANIC"},
+
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect               = "AB_FX_HIT_GUN_A_PURPLE",
+	},
+	{--? 부활전, 넉백
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_EP6_MINISTRA_MOVE_START",
+		m_ReActType 		= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SUPER",
+		m_BackSpeedX            = 500,
+
+		m_ReAttackCount         = 1,
+		m_fReAttackGap          = 0.0,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_PURPLE",
+	},
+--*EP6 스니퍼
+	{
+		m_DamageTempletName       = "DT_MOB_ELITE_EP6_SNIFFER_SKILL1",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_fStunTime               = 2,
+		m_StunIgnoreStyleType     = {"NUST_MECHANIC"},
+
+		m_BackSpeedX              = 200,
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_PURPLE",
+	},
+--* 테스트 던전용 보스
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_TEST_TOMBSTONE_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 0,
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_TEST_TOMBSTONE_SKILL1",
+		m_ReActType = "NRT_DAMAGE_DOWN",
+		m_BackSpeedX              = 100,
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_TEST_TOMBSTONE_HYPER1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 800,
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 리플레이서 나이트
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_NO",
+		
+		m_BackSpeedX 	= 100,
+		
+		m_HitSoundName 	= "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect	 	= "AB_FX_HIT_SLASH_B_RED",
+		
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_ATTACK1_END",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_NO",
+		
+		m_BackSpeedX 	= 150,
+		
+		m_HitSoundName 	= "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect	 	= "AB_FX_HIT_SLASH_B_RED",
+		
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_ATTACK1_PHASE",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_NO",
+		
+		m_BackSpeedX 	= 150,
+		
+		m_HitSoundName 	= "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect	 	= "AB_FX_HIT_SLASH_B_RED",
+
+		m_NKMKillFeedBack	=
+		{
+			m_BuffName = "BUFF_REPLACER_C_KNIGHT_SKILL",
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_ATTACK1_PHASE_END",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_NO",
+		
+		m_BackSpeedX 	= 200,
+		
+		m_HitSoundName 	= "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect	 	= "AB_FX_HIT_SLASH_B_RED",
+
+		m_NKMKillFeedBack	=
+		{
+			m_BuffName = "BUFF_REPLACER_C_KNIGHT_SKILL",
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_PASSIVE1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		
+		m_BackSpeedX 	= 200,
+		m_BackSpeedJumpY= 1000,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_REPLACER_C_KNIGHT_PASSIVE",
+			},
+		},
+
+		m_HitEffect	 	= "AB_FX_HIT_GUN_A_PURPLE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_SKILL1",		
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX 		= -400,
+		m_BackSpeedJumpY 	= 0,
+		
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.2,
+		
+		m_HitEffect	 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_SKILL1_END",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX       = 1200,
+		m_BackSpeedJumpY   = 0,
+
+		m_DeleteBuffCount 	= 1,
+
+		m_HitEffect	 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_HYPER1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_BackSpeedX        = 1100,
+		m_BackSpeedJumpY 	= 1200,
+		m_ReAttackCount       = 3,
+		m_fReAttackGap 	      = 0.1,
+		m_fStopTimeDef        = 0,
+		m_fStopReserveTimeDef = 0,
+		
+		m_HitEffect	 	= "AB_FX_HIT_GUN_A_PURPLE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_HYPER1_END",		
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_BackSpeedX        = 0,
+		m_BackSpeedJumpY 	= 1800,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_REPLACER_C_KNIGHT_HYPER",
+			},
+		},
+		
+		m_HitEffect	 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_REPLACER_C_KNIGHT_HYPER1_LV5_END",		
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_BackSpeedX        = 0,
+		m_BackSpeedJumpY 	= 1800,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_REPLACER_C_KNIGHT_HYPER_LV5",
+			},
+		},
+		
+		m_HitEffect	 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+--*리플레이서 이벤트 디자스터
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PV_REPLACER_BLASTER_ATTACK2",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel    = "NSAL_NO",
+
+		m_BackSpeedX              = 300,
+		m_BackSpeedJumpY          = 0,
+		m_ReAttackCount           = 0,
+		m_fReAttackGap            = 0/30,
+		m_fStopTimeDef            = 0/30,
+		m_fStopReserveTimeDef     = 0/30,
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+	},
+--* 알비온
+	{--* 일반 공격
+		m_DamageTempletName         = "DT_NKM_SHIP_C_ALBION_ATTACK1",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_BackSpeedX                = 300,
+
+		m_HitEffect                 = "AB_fx_hit_explosion_fire",
+		m_bHitEffectLand            = true,
+		m_HitEffectAir              = "AB_fx_air_explosion_fire",
+	},
+	{--* 스킬1 미사일
+		m_DamageTempletName         = "DT_NKM_SHIP_C_ALBION_SKILL1_START",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_BackSpeedX                = 0,
+		m_ReAttackCount             = 0,
+		m_fReAttackGap              = 0,
+	},
+	{--* 스킬1 폭발 (아군용)
+		m_DamageTempletName         = "DT_NKM_SHIP_C_ALBION_SKILL1",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_STING_SMALL",
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_SHIP_ALBION_SKILL1_LV_1",
+			},
+		},
+	},
+	{--* 스킬1 폭발 (버프 추가)
+		m_DamageTempletName         = "DT_NKM_SHIP_C_ALBION_SKILL1_LV2",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_STING_SMALL",
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_SHIP_ALBION_SKILL1_LV_2",
+			},
+		},
+	},
+
+	{--* 스킬1 폭발 (적군용)
+		m_DamageTempletName         = "DT_NKM_SHIP_C_ALBION_SKILL1_ATTACK",
+		m_ReActType                 = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_STING_SMALL",
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_BackSpeedJumpY            = 1200,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_SHIP_ALBION_SKILL1_LV_1",
+			},
+		},
+	},
+	{--* 스킬1 폭발 (버프 추가)
+		m_DamageTempletName         = "DT_NKM_SHIP_C_ALBION_SKILL1_ATTACK_LV2",
+		m_ReActType                 = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_STING_SMALL",
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_BackSpeedJumpY            = 1200,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_SHIP_ALBION_SKILL1_LV_2",
+			},
+		},
+	},
+	
+	{--* 궁극기1
+		m_DamageTempletName         = "DT_NKM_SHIP_C_ALBION_HYPER1",
+		m_ReActType                 = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_ReAttackCount          	= 3,
+		m_fReAttackGap = 0.13,
+
+		m_BackSpeedX                = 1200,
+		m_BackSpeedJumpY            = 760,
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_STING_SMALL",
+	},
+	{--* 궁극기1 (디버프 추가)
+		m_DamageTempletName         = "DT_NKM_SHIP_C_ALBION_HYPER1_LV2",
+		m_ReActType                 = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_ReAttackCount           	= 3,
+		m_fReAttackGap = 0.13,
+
+		m_BackSpeedX                = 1200,
+		m_BackSpeedJumpY            = 760,
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_STING_SMALL",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_SHIP_ALBION_HYPER1",
+			},
+		},
+	},
+--* 챌린지 모드 (린시엔)
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_FREEDOM_LIN_SKILL1",
+		m_ReActType = "NRT_NO_ACTION",
+
+		m_BackSpeedX = 300,
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime	= 0.4,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_SHOTGUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_FREEDOM_LIN_SKILL1_BACK",
+		m_ReActType = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX = 1500,
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime	= 0.4,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_SHOTGUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--* 챌린지 모드 (히로세 아키)
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FREEDOM_KASUMI_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+        
+		m_fStopTimeAtk = 0.1,
+		m_fStopTimeDef = 0.2,
+		
+		m_BackSpeedX = 800,
+		
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime 	= 0.3,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FREEDOM_KASUMI_HYPER1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_fStopReserveTimeDef = 0.05,
+		m_fStopTimeDef = 0.2,
+		
+		m_BackSpeedX 		= 800,
+		m_BackSpeedJumpY 	= 1500,
+		
+		m_fCameraCrashGap 	= 20,
+		m_fCameraCrashTime 	= 0.4,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG_02",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--* 챌린지 모드 (이민서)
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FREEDOM_LEE_MINSEO_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 150,
+		
+		m_fCameraCrashGap 	= 0,
+		m_fCameraCrashTime 	= 0.3,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+
+		m_DefenderBuff	= "DEBUFF_FREEDOM_LEE_MINSEO_SKILL",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FREEDOM_LEE_MINSEO_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		m_BackSpeedX 	= 0,
+
+		m_fStunTime               = 2,
+		m_StunIgnoreStyleType     = {"NUST_MECHANIC"},
+		
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime 	= 0.3,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_ELECTRIC_BIG_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FREEDOM_LEE_MINSEO_HYPER1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		m_BackSpeedJumpY = 1000,
+		
+		m_fCameraCrashGap 	= 20,
+		m_fCameraCrashTime 	= 0.3,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_ELECTRIC_BIG_03",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+
+		m_DefenderBuff	= "DEBUFF_FREEDOM_LEE_MINSEO_HYPER",
+	},
+--* 챌린지 모드 (에이미)
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_AMY_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.1,
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_AMY_SKILL1",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX = 200,
+		
+		m_fReAttackGap	= 0.3,
+		m_ReAttackCount	= 2,
+
+		m_fCameraCrashGap = 10,
+		m_fCameraCrashTime = 0.2,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_AMY_HYPER1",
+		m_ReActType = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_fStopReserveTimeDef = 0.05,
+		m_fStopTimeDef = 0.1,
+		
+		m_fCameraCrashGap = 20,
+		m_fCameraCrashTime = 0.2,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* 거대 링컨
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_STATE_TANK_MK2_ATTACK1",
+		m_ReActType = "NRT_DAMAGE_A",
+		
+		m_BackSpeedX = 1100,
+
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.15,
+		
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_STATE_TANK_MK2_ATTACK1_END",
+		m_ReActType = "NRT_DAMAGE_UP",
+		
+		m_BackSpeedJumpY = 800,
+
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.15,
+		
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_STATE_TANK_MK2_ATTACK2",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 50,
+		
+		m_ReAttackCount = 7,
+		m_fReAttackGap 	= 0.1,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_STATE_TANK_MK2_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		
+		m_BackSpeedX = 800,
+
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.2,
+		
+		-- m_HitSoundName = "FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL_02",
+		-- m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 거대 시 헌터킬러
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_NEEDLER_SUMMER_HYPER1",
+		m_ReActType = "NRT_DAMAGE_A",
+		
+		m_BackSpeedX = 150,
+
+		m_ReAttackCount = 2,
+		m_fReAttackGap 	= 0.2,
+		
+		-- m_HitSoundName = "FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL_02",
+		-- m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_NEEDLER_SUMMER_HYPER1_END",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		m_BackSpeedJumpY = 2000,
+		
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime 	= 0.2,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 챌린지 카린 웡
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_DELTA_KYLE_AP_ATTACK1",
+		m_ReActType 		= "NRT_NO_ACTION",
+
+		m_BackSpeedX		= 50, 
+		m_ReAttackCount		= 3,
+		m_fReAttackGap		= 0.1,
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE", 
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_DELTA_KYLE_AP_PASSIVE",
+		m_ReActType 		= "NRT_DAMAGE_A",
+
+		m_BackSpeedX		= 600, 
+
+		m_HitEffect 	    = "AB_FX_HIT_SLASH_B_BLUE",
+		m_bCrashBarrier		= true,
+		-- m_HitSoundName 	= "FX_COMBAT_ALL_GUN_FIRE_SMALL_07",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_DELTA_KYLE_AP_SKILL1",
+		m_ReActType 		= "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX		= 2000,
+
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE", 
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_DELTA_KYLE_AP_HYPER1",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+		m_BackSpeedJumpY    = 300,
+
+		m_BackSpeedX		= 50, 
+		m_ReAttackCount		= 4,
+		m_fReAttackGap		= 0.25,
+
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_BLUE", 
+	},
+--* 챌린지 발레리 스킬
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_ADMIN_SHIELD_SKILL1",
+		m_ReActType 		= "NRT_DAMAGE_A",
+
+		m_BackSpeedX		= 800, 
+
+		m_HitEffect 	    = "AB_FX_HIT_SLASH_A_RED",
+		-- m_HitSoundName 	= "FX_COMBAT_ALL_GUN_FIRE_SMALL_07",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_ADMIN_CANNON_SKILL1",
+		m_ReActType 		= "NRT_NO_ACTION",
+
+		m_BackSpeedX		= 0, 
+		m_ReAttackCount		= 1,
+		m_fReAttackGap		= 0,
+
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_BLUE",
+		
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_ELITE_CHALLENGE_ADMIN_CANNON_SKILL1",
+			},
+		},
+	},
+--* 챌린지 라이노 MK2
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_SL_HEAVY_TANK_RUN",
+		m_ReActType = "NRT_DAMAGE_A",
+
+		--m_fStopReserveTimeDef = 0.05,
+		--m_fStopTimeDef = 0.1,
+		
+		m_BackSpeedX = 300,
+		
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_SL_HEAVY_TANK_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+
+		--m_fStopReserveTimeDef = 0.05,
+		--m_fStopTimeDef = 0.1,
+		
+		m_BackSpeedX = 0,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_BIG",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_SL_HEAVY_TANK_SKILL1",
+		m_ReActType         = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX     = 1500, 
+		m_BackSpeedJumpY = 800,
+
+		--m_fStopReserveTimeDef = 0.05,
+		--m_fStopTimeDef = 0.1,
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_SL_HEAVY_TANK_SKILL1_TOWER",
+		m_ReActType = "NRT_NO_ACTION",
+
+		m_fInstantKillHPRate      = 1.01,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_BIG",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_SL_HEAVY_TANK_SKILL2_END",
+		m_ReActType = "NRT_NO_ACTION",
+
+		--m_fStopReserveTimeDef = 0.05,
+		--m_fStopTimeDef = 0.1,
+		
+		m_BackSpeedX = 0,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_BIG",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--* 챌린지 버자드
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_SL_AIR_HELI_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 200,
+		
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.15,
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_SL_AIR_HELI_ATTACK2",
+		m_ReActType = "NRT_NO_ACTION",
+		m_BackSpeedX = 200,
+		
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.15,
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 챌린지 라이언
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_RYAN_ATTACK1",
+		m_ReActType			= "NRT_NO_ACTION",
+
+		m_ReAttackCount = 2,
+		m_fReAttackGap 	= 0.1,
+
+		m_HitSoundName 	= "FX_COMBAT_ALL_HIT_SMASH_SMALL",
+		m_fLocalVol		= 0.7,
+
+		m_HitEffect		= "AB_FX_HIT_SLASH_B_RED",
+		m_HitEffectAir 	= "AB_FX_HIT_SLASH_B_RED",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_ELITE_CHALLENGE_BD_RYAN_PASSIVE",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_RYAN_ATTACK1_END",
+		m_ReActType			= "NRT_NO_ACTION",
+
+		m_HitSoundName 	= "FX_COMBAT_ALL_HIT_SMASH_SMALL",
+		m_fLocalVol		= 0.7,
+
+		m_BackSpeedX	= 50,
+		m_HitEffect		= "AB_FX_HIT_SLASH_B_RED",
+		m_HitEffectAir 	= "AB_FX_HIT_SLASH_B_RED",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_ELITE_CHALLENGE_BD_RYAN_PASSIVE",
+			},
+		},
+	},
+	{
+		m_DamageTempletName		= "DT_NKM_MOB_ELITE_CHALLENGE_BD_RYAN_SKILL1",
+		m_ReActType				= "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_fStunTime 			= 5,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+
+		m_BackSpeedX	= 200,
+		m_HitEffect		= "AB_FX_HIT_SLASH_A_RED",
+		m_HitEffectAir 	= "AB_FX_HIT_SLASH_A_RED",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_ELITE_CHALLENGE_BD_RYAN_PASSIVE",
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_BD_RYAN_HYPER1",
+		m_ReActType				= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX	= 100,
+		m_fStopTimeDef 	= 0.2,
+		m_HitEffect		= "AB_FX_HIT_SLASH_A_RED",
+		m_HitEffectAir 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_BD_RYAN_HYPER1_END",
+		m_ReActType				= "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX				= 3000,
+		m_BackSpeedJumpY	= 800,
+		m_fStopTimeDef 	= 0.15,
+		m_HitEffect		= "AB_FX_HIT_SLASH_A_RED",
+		m_HitEffectAir 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 챌린지 로이
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_ROI_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 200,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+		
+		-- m_fCameraCrashGap = 0,
+		-- m_fCameraCrashTime = 0.2,
+
+		m_DefenderBuff	= "DEBUFF_MOB_ELITE_CHALLENGE_BD_ROI_PASSIVE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_ROI_SKILL1",
+		m_ReActType = "NRT_DAMAGE_A",
+		
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX 	= 500,
+		
+		-- m_fCameraCrashGap = 10,
+		-- m_fCameraCrashTime = 0.2,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+		
+		m_AttackerStateChange	= "USN_SKILL1_END",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_ROI_SKILL1_END",
+		m_ReActType = "NRT_DAMAGE_UP",
+		
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedJumpY 	= 1400,
+		m_BackSpeedX 		= -600,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+		
+		-- m_fCameraCrashGap = 10,
+		-- m_fCameraCrashTime = 0.3,
+
+		m_DefenderBuff	= "DEBUFF_MOB_ELITE_CHALLENGE_BD_ROI_SKILL1",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_ROI_HYPER1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_BackSpeedJumpY 	= 800,
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_MECHANIC_TANK_FIRE_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		
+		-- m_fCameraCrashGap = 20,
+		-- m_fCameraCrashTime = 0.3,
+	},
+--* 챌린지 새디어스
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_THADDEUS_PASSIVE",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 1700,
+		
+		-- m_fCameraCrashGap 	= 0,
+		-- m_fCameraCrashTime 	= 0.3,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_THADDEUS_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 0,
+		
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.08,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL_03",
+		-- m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_THADDEUS_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		
+		m_BackSpeedX 	= 100,
+		
+		m_ReAttackCount = 6,
+		m_fReAttackGap 	= 0.1,
+		
+		-- m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL_03",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_THADDEUS_SKILL1_ONEKILL",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 0,
+	
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+
+		m_fInstantKillHPRate	= 1.01,
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_THADDEUS_HYPER1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		m_BackSpeedJumpY = 1800,
+
+		-- m_fCameraCrashGap 	= 20,
+		-- m_fCameraCrashTime 	= 1,
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_EXPLOSION_ATTACK_BIG_02",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--* 엘리자베스
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_ELIZABETH_START",
+		m_ReActType = "NRT_DAMAGE_A",
+		
+		m_BackSpeedX 	= 150,
+		
+		m_ReAttackCount = 5,
+		m_fReAttackGap 	= 0.05,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_ELITE_CHALLENGE_BD_ELIZABETH_ATK",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_ELIZABETH_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 100,
+		
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.05,
+		
+		m_HitSoundName = "FX_COMBAT_MONSTER_HIT_STING_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_ELITE_CHALLENGE_BD_ELIZABETH_ATK",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_ELIZABETH_SKILL1",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		m_BackSpeedX 	= 0,
+		
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.1,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_ELITE_CHALLENGE_BD_ELIZABETH_ATK",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_BD_ELIZABETH_HYPER1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_fStunTime	= 5.0,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+	},
+--* 챌린지 브라우니 무어
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_HANDGUN_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX		= 0,	
+		m_BackSpeedJumpY	= 700,
+		m_HitEffect 		= "AB_FX_HIT_BIOTIC_A_PURPLE",
+		m_HitEffectAir 		= "AB_FX_HIT_BIOTIC_A_PURPLE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_ACADEMY_HANDGUN_SKILL1_LV5",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+--* 격전지원 타이런트 아머
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_ATTACK1_N",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 50,
+		-- m_ReAttackCount           = 2,
+		-- m_fReAttackGap            = 15/30,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_DEFFENDER_PASSIVE1_N",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_ATTACK1_H",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 50,
+		-- m_ReAttackCount           = 2,
+		-- m_fReAttackGap            = 15/30,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_DEFFENDER_PASSIVE1_H",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_ATTACK1_S",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 50,
+		-- m_ReAttackCount           = 2,
+		-- m_fReAttackGap            = 15/30,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_DEFFENDER_PASSIVE1_S",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_ATTACK2",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 50,
+
+		m_HitSoundName 			  = "FX_COMBAT_ALL_ELECTRIC_ATTACK_BIG_04",
+		m_fLocalVol 			  = 0.6,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 50,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 0.15,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_SKILL2",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 1800,
+		m_BackSpeedJumpY          = 800,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_HYPER1",
+		m_ReActType               = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 100,
+		m_BackSpeedJumpY          = 0,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_HYPER1_END",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedJumpY          = 900,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 0.1,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_PATTERN1",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 1200,
+		m_BackSpeedJumpY          = 800,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 0.15,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		m_bCrashBarrier           = true,
+	},
+--* 격전지원 타이런트 소드
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_ATTACK1_END_N",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_STRIKER_PASSIVE1_N",
+				m_HitBuffBaseLevel        = 1,
+			},
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_STRIKER_PASSIVE2",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_ATTACK1_END_H",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_STRIKER_PASSIVE1_H",
+				m_HitBuffBaseLevel        = 1,
+			},
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_STRIKER_PASSIVE2",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_ATTACK1_END_S",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_STRIKER_PASSIVE1_S",
+				m_HitBuffBaseLevel        = 1,
+			},
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_STRIKER_PASSIVE2",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_ATTACK2",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 0,
+		m_ReAttackCount           = 0,
+		m_fReAttackGap            = 0/30,
+		
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName 	  = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_SKILL1",
+		m_ReActType 			  = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 300,
+		m_BackSpeedJumpY          = 800,
+		m_ReAttackCount           = 0,
+		m_fReAttackGap            = 0/30,
+
+		m_HitEffect				  = "AB_FX_HIT_SLASH_A_BLUE",
+		m_NKMKillFeedBack	=
+		{
+			m_fSkillCoolTimeAdd = -18,
+		},
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_HYPER1",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 800,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 15/30,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_HYPER1_END",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 200,
+		m_BackSpeedJumpY          = 1200,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_PATTERN1_START",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 0,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_PATTERN1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = -4000,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_PATTERN1_END",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 0,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* 챌린지 타이탄 프로토 타입
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_FUTURE_TITAN_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 300,
+		
+		-- m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		
+		m_fCameraCrashGap = 10,
+		m_fCameraCrashTime = 0.5,
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CHALLENGE_FUTURE_TITAN_SKILL1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_fReAttackGap		= 0.1,
+		m_ReAttackCount		= 4,
+		m_BackSpeedJumpY	= 500,
+		
+		-- m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		
+		m_fCameraCrashGap = 10,
+		m_fCameraCrashTime = 0.5,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_BOSS_CHALLENGE_FUTURE_TITAN_SKILL1",
+			},
+		},
+	},
+--* 챌린지 야누스
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FUTURE_HARPY_ATTACK1",
+		m_ReActType 		= "NRT_NO_ACTION",
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_BLUE", 
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FUTURE_HARPY_SKILL1",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX			= 600, 
+		m_BackSpeedJumpY		= 1200,
+		m_fStopTimeDef			= 0.2,
+		m_fStopReserveTimeDef	= 0.1,
+
+		m_HitEffect 		= "AB_FX_HIT_SLASH_A_RED", 
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FUTURE_HARPY_LAND_START",
+		m_ReActType 		= "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX		= 1300, 
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_BLUE", 
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FUTURE_HARPY_LAND_ATTACK1",
+		m_ReActType 		= "NRT_NO_ACTION",
+
+		m_BackSpeedX		= 500, 
+
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_BLUE", 
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FUTURE_HARPY_LAND_SKILL1",
+		m_ReActType 		= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_ReAttackCount		= 6,
+		m_fReAttackGap		= 0.2,
+
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_BLUE", 
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_FUTURE_HARPY_LAND_SKILL1_END",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX		= 1000, 
+		m_BackSpeedJumpY	= 1600,
+
+		m_HitEffect 		= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* 챌린지 이프리트
+	{
+		m_DamageTempletName = "DT_NKM_MOB_ELITE_CHALLENGE_ADMIN_MACHINEGUN_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX = 50,
+		
+		m_ReAttackCount = 2,
+		m_fReAttackGap 	= 0.1,
+		
+		m_fCameraCrashGap 	= 2,
+		m_fCameraCrashTime	= 0.15,
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_ONESHOT_FIRE_SMALL",
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_BLUE",
+		m_HitEffectAir	= "AB_FX_HIT_GUN_A_BLUE",	
+	},
+--* 챌린지 하랍
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_WHIP_ATTACK1",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 0,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+
+		m_listAttackerHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_CHALLENGE_PUPPET_C_WHIP_PASSIVE",
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_WHIP_ATTACK1_ALLY",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 0,
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_BLUE",
+
+		m_listAttackerHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_CHALLENGE_PUPPET_C_WHIP_PASSIVE",
+			},
+		},
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_CHALLENGE_PUPPET_C_WHIP_ALLY",
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_WHIP_ATTACK1_PASSIVE",
+		m_ReActType 			= "NRT_DAMAGE_A",
+
+		m_BackSpeedX	= 600,
+		
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_RED",
+
+		m_listAttackerHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_CHALLENGE_PUPPET_C_WHIP_PASSIVE",
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_WHIP_ATTACK1_PASSIVE_SUMMON",
+		m_ReActType 			= "NRT_DAMAGE_A",
+
+		m_BackSpeedX	= 600,
+		
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_RED",
+
+		m_listAttackerHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_CHALLENGE_PUPPET_C_WHIP_PASSIVE",
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_WHIP_ATTACK1_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX	= 800,
+		m_fStopTimeDef			= 0.2,
+		m_fStopReserveTimeDef	= 0.2,
+		
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_WHIP_ATTACK1_SKILL1_SUMMON",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX	= 0,
+
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_CHALLENGE_PUPPET_C_WHIP_CONFUSE",
+				m_HitBuffBaseLevel = 180,
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_WHIP_ATTACK1_HYPER1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_ReAttackCount	= 2,
+		m_fReAttackGap	= 0.15,
+
+		m_BackSpeedX	= 400,
+		
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_WHIP_ATTACK1_HYPER1_END",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_fStopTimeDef			= 0.1,
+		m_fStopReserveTimeDef	= 0.2,
+
+		m_BackSpeedJumpY = 1500,
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 챌린지 세라펠
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_BLIND_ATTACK1",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 0,
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_BLIND_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.15,
+
+		m_BackSpeedJumpY 	= 900,
+
+		m_BackSpeedX	= 0,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_BLIND_HYPER1",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_ReAttackCount = 4,
+		m_fReAttackGap 	= 0.1,
+
+		m_BackSpeedJumpY 	= 500,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_BLIND_HYPER1_END",
+		m_ReActType 			= "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_fStunTime				= 6,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+
+		m_BackSpeedX	= 0,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_ELITE_CHALLENGE_PUPPET_C_BLIND_PASSIVE",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.1,
+
+		m_BackSpeedJumpY 	= 600,
+		m_BackSpeedX		= 100,
+		
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_BLUE",
+	},
+--* 챌린지 오래된 공포
+	{--*기본공격1
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_CHALLENGE_BLASTER_ESPR_ATTACK1",
+		m_ReActType                 = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_BackSpeedX                = 100,
+		m_BackSpeedJumpY            = 0,
+
+		m_HitEffect                 = "AB_FX_HIT_GUN_A_RED",
+		m_HitEffectAir              = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--*기본공격2
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_CHALLENGE_BLASTER_ESPR_ATTACK2",
+		m_ReActType                 = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_BackSpeedX                = 0,
+		m_BackSpeedJumpY            = 0,
+
+		m_HitEffect                 = "AB_FX_HIT_GUN_A_RED",
+		m_HitEffectAir              = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--*스킬1
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_CHALLENGE_BLASTER_ESPR_SKILL1",
+		m_ReActType                 = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_BackSpeedX                = 500,
+		m_BackSpeedJumpY            = 0,
+
+		m_ReAttackCount             = 2,
+		m_fReAttackGap              = 7/30,
+		m_fCoolTimeDamage           = 3,
+
+		m_HitEffect                 = "AB_FX_HIT_GUN_A_RED",
+		m_HitEffectAir              = "AB_FX_HIT_GUN_A_RED",
+	},
+	{--*스킬2
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_CHALLENGE_BLASTER_ESPR_SKILL2",
+		m_ReActType                 = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_BackSpeedX                = 300,
+		m_BackSpeedJumpY            = 0,
+
+		m_ReAttackCount             = 3,
+		m_fReAttackGap              = 5/30,
+		m_fCoolTimeDamage           = 0,
+
+		m_HitEffect                 = "AB_FX_HIT_GUN_A_RED",
+		m_HitEffectAir              = "AB_FX_HIT_GUN_A_RED",
+	},
+--* 길티기어 이벤트 유진
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ALT_YOO_JIN_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+    
+		m_BackSpeedX = 50,
+		m_ReAttackCount = 4,
+		m_fReAttackGap 	= 0.05,
+		
+		m_fLocalVol	= 0.5,
+		m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+		
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.1,
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ALT_YOO_JIN_ATTACK1_SHOT",
+		m_ReActType = "NRT_NO_ACTION",
+    
+		m_BackSpeedX = 50,
+		
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.2,
+		
+		m_fLocalVol	= 0.7,
+		m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ALT_YOO_JIN_ATTACK1_KICK",
+		m_ReActType = "NRT_NO_ACTION",
+    
+		m_BackSpeedX = 500,
+		m_fStopTimeAtk = 0.05,
+		m_fStopTimeDef = 0.05,
+
+		m_fLocalVol	= 0.6,
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+		
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.3,
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ALT_YOO_JIN_PASSIVE",
+		m_ReActType = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX = 200,
+		--m_fCameraCrashGap = 10,	
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ALT_YOO_JIN_PASSIVE_END",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX = 400,
+		m_BackSpeedJumpY = 800,
+		--m_fCameraCrashGap = 10,	
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ALT_YOO_JIN_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX = 200,
+		--m_fCameraCrashGap = 10,	
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ALT_YOO_JIN_SKILL2",
+		m_ReActType 	= "NRT_DAMAGE_UP",
+
+		m_BackSpeedJumpY = 1000,
+		
+		m_fCameraCrashGap = 10,
+		m_fCameraCrashTime = 0.3,
+
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ALT_YOO_JIN_HYPER1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_fCameraCrashGap = 20,
+		m_fCameraCrashTime = 0.3,
+		m_BackSpeedJumpY = 800,
+
+		--m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ALT_YOO_JIN_HYPER2",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_fCameraCrashGap = 20,
+		m_fCameraCrashTime = 0.3,
+		m_BackSpeedJumpY = 300,
+
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.15,
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--* 길티기어 이벤트 솔 배드가이
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_ATTACK1",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 150,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_ATTACK1_END",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 600,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_ATTACK2",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_ReAttackCount	= 3,
+		m_fReAttackGap	= 0.1,
+
+		-- m_listDefenderHitBuff =
+		-- {
+		-- 	{
+		-- 		m_HitBuff = "DEBUFF_MOB_BOSS_CLB_001_GUILTY_C_SOL_ATTACK2",
+		-- 	},
+		-- },
+
+		m_BackSpeedX	= 50,	
+		m_HitEffect 	= "AB_FX_hit_explosion_fire_small",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_PASSIVE",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+
+		m_fStopTimeDef			= 0.5,
+		m_fStopReserveTimeDef 	= 0.1,	
+
+		m_BackSpeedJumpY			= 800,
+		-- m_BackSpeedKeepTimeJumpY	= 0.5,
+
+		m_BackSpeedX			= 30,
+		m_BackSpeedKeepTimeX	= 0.5,
+		
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_HCM_PASSIVE",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+
+		m_fStopTimeDef			= 0.5,
+		m_fStopReserveTimeDef 	= 0.1,
+
+		m_BackSpeedJumpY			= 800,
+		-- m_BackSpeedKeepTimeJumpY	= 0.5,
+
+		m_BackSpeedX			= 30,
+		m_BackSpeedKeepTimeX	= 0.5,
+		
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX	= 800,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_SKILL1_END",
+		m_ReActType 			= "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_fStopTimeDef			= 0.1,
+		m_fStopReserveTimeDef 	= 0.05,	
+		
+		-- m_fStopTimeAtk			= 0.1,
+		-- m_fStopReserveTimeAtk	= 0.05,
+
+		m_BackSpeedX	= 1800,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_SKILL1_HCM",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+		
+		-- m_fStopTimeAtk			= 0.1,
+		-- m_fStopReserveTimeAtk	= 0.05,
+
+		m_bCrashBarrier		= true,
+		m_DeleteBuffCount 	= 3,
+
+		m_BackSpeedX	= 4000,
+		m_BackSpeedJumpY = 600,
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_HYPER1",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedJumpY		= 700,
+		m_ReAttackCount			= 2,
+		m_fReAttackGap			= 0.1,
+		m_HitEffect 			= "AB_FX_hit_explosion_fire_small",
+	},
+--* 길티기어 이벤트 오르카
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ORCA_STANDUP",
+		m_ReActType = "NRT_DAMAGE_B",
+
+		m_fStopReserveTimeDef = 0.05,
+		m_fStopTimeDef = 0.3,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_STING_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ORCA_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+
+		m_fReAttackGap	= 0.1,
+		m_ReAttackCount	= 2,
+		m_BackSpeedX 	= 200,
+		
+		-- m_HitSoundName 	= "FX_COMBAT_ALL_SWORD_SLASH_SMALL_02",
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_ORCA_PASSIVE",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ORCA_ATTACK1_END",
+		m_ReActType = "NRT_NO_ACTION",
+
+		m_BackSpeedX = 200,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_SWORD_SLASH_SMALL_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_RED",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_ORCA_PASSIVE",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ORCA_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_STING_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ORCA_CM_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_STING_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_RED",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_BOSS_CLB_001_ORCA_SKILL1",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_ORCA_HYPER1",
+		m_ReActType = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_fStopReserveTimeDef = 0.05,
+		m_fStopTimeDef = 1.0,
+		
+		--m_fCameraCrashGap = 20,
+		m_fCameraCrashTime = 0.5,
+		
+		--m_HitSoundName = "FX_COMBAT_ALL_SWORD_SLASH_BIG_03",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+
+		m_NKMKillFeedBack	=
+		{
+			m_fHyperSkillCoolTimeAdd = -40,
+		},
+	},
+--* 길티기어 이벤트 메이
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_ATTACK1",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 150,	
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_ATTACK1_STUN",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_fStunTime				= 3,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+
+		m_BackSpeedX	= 0,	
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_ATTACK3",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 50,	
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_CATCH",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_DeleteBuffCount 	= 1,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_GUILTY_MAY_SKILL",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+
+		m_BackSpeedX	= 0,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_HCM_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_DeleteBuffCount 	= 1,
+		m_fStunTime 			= 4,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+
+		m_fStopTimeDef          = 0,
+		m_fStopReserveTimeDef   = 0,
+		
+		m_BackSpeedX	= 600,
+		m_BackSpeedJumpY= 0,
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_HCM_PASSIVE_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_DeleteBuffCount 	= 1,
+		m_fStunTime 			= 3,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+
+		m_fStopTimeDef          = 0,
+		m_fStopReserveTimeDef   = 0,
+		
+		m_BackSpeedX	= 600,
+		m_BackSpeedJumpY= 0,
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_HCM_SKILL1_DOWN",
+		m_ReActType 			= "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_fStunTime 			= 3,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+
+		m_BackSpeedX	= 0,
+		m_BackSpeedJumpY = 0,
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_SKILL1_STUN",
+		m_ReActType 			= "NRT_DAMAGE_CATCH",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX	= 0,
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+
+		m_fStunTime 			= 2,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+
+		m_DeleteBuffCount 	= 1,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_GUILTY_MAY_SKILL",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_SKILL1_DOWN",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX	= 0,
+		m_BackSpeedJumpY = 800,	
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_HYPER1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX	= 400,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitEffectAir 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_HYPER1_END",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedJumpY		= 1500,
+		m_BackSpeedX			= 1200,
+
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitEffectAir 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_HCM_HYPER1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX	= 400,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitEffectAir 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_HCM_HYPER1_END",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedJumpY		= 1500,
+		m_BackSpeedX			= 1200,
+
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitEffectAir 	= "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* 길티기어 이벤트 히로세 아키
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_FREEDOM_KASUMI_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+        
+		m_fStopTimeAtk = 0.05,
+		m_fStopTimeDef = 0.05,
+		
+		m_BackSpeedX = 250,
+		
+		m_fCameraCrashGap 	= 0,
+		m_fCameraCrashTime 	= 0.1,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_FREEDOM_KASUMI_ATTACK2",
+		m_ReActType = "NRT_NO_ACTION",
+        
+		m_fStopTimeAtk = 0.05,
+		m_fStopTimeDef = 0.05,
+		
+		m_BackSpeedX = 500,
+		
+		m_fCameraCrashGap 	= 0,
+		m_fCameraCrashTime 	= 0.2,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_FREEDOM_KASUMI_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+        
+		m_fStopTimeAtk = 0.1,
+		m_fStopTimeDef = 0.2,
+		
+		m_BackSpeedX = 800,
+		
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime 	= 0.3,
+
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_FREEDOM_KASUMI_SKILL2_START",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+		
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 15/30,
+		m_BackSpeedX              = 300,
+		m_fStopReserveTimeDef     = 13/30,
+		m_fStopTimeDef            = 2/30,
+
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_WIND",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_FREEDOM_KASUMI_SKILL2",
+		m_CrashSuperArmorLevel 	= "NSAL_SKILL",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 10/30,
+
+		m_BackSpeedJumpY	= -500,
+
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_WIND",
+		m_HitEffect = "AB_FX_HIT_SLASH_B_BLUE",
+		m_fLocalVol = 0.5,
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_FREEDOM_KASUMI_HYPER1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_fStopReserveTimeDef = 0.05,
+		m_fStopTimeDef = 0.2,
+		
+		m_BackSpeedX 		= 800,
+		m_BackSpeedJumpY 	= 1500,
+		
+		m_fCameraCrashGap 	= 20,
+		m_fCameraCrashTime 	= 0.4,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG_02",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--* 길티기어 챌린지 밀리아 레이지
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_ATTACK1",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_ReAttackCount			= 10,
+		m_fReAttackGap			= 0.033,
+
+		m_BackSpeedX	= 50,	
+		m_HitEffect 	= "AB_FX_HIT_GUILTY_S_MILLIA_ATTACK1",
+		m_HitEffectAir 	= "AB_FX_HIT_GUILTY_S_MILLIA_ATTACK1",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_PASSIVE",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedJumpY	= 0,
+		m_BackSpeedX		= 1800,
+
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedJumpY		= 700,
+		m_BackSpeedX			= 100,	
+
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+
+		m_bCrashBarrier = true,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_COMMON_BLIND",
+				m_HitBuffBaseLevel        = 5,
+			},
+		},
+		
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_SKILL1_END",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedJumpY = 300,
+		m_BackSpeedX	= 0,	
+		m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_HYPER1",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedJumpY		= 900,
+		m_BackSpeedX			= 100,
+
+		m_ReAttackCount			= 3,
+		m_fReAttackGap			= 0.1,
+
+		-- m_fStopTimeDef = 0.1,
+		-- m_fStopTimeAtk = 0.1,
+
+		-- m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_HYPER1_END",
+		m_ReActType 			= "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedJumpY		= 1200,
+		m_BackSpeedX			= 400,
+		-- m_HitEffect 	= "AB_FX_HIT_SLASH_B_RED",
+	},
+--* 길티기어 챌린지 유닛 체커
+	{--? 맵에 적 유닛 수량 체크
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_NO",
+
+		m_BackSpeedX = 0,
+
+		m_listAttackerHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+			},
+		},
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_DUMMY",
+		m_HitEffectAir = "AB_FX_DUMMY",
+	},
+--* 길티기어 이벤트 램리썰 밸런타인
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_ATTACK1",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 150,	
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_PASSIVE1",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 150,	
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_PASSIVE2",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 150,	
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_PASSIVE3",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX	= 600,	
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_HCM_PASSIVE3",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX	= 600,	
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_ORANGE",
+
+		m_listAttackerHitBuff =
+		{
+			{
+				m_HitBuff = "BUFF_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_PASSIVE",
+			},
+		},
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_PASSIVE",
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX	= 800,
+		m_BackSpeedJumpY= 1200,
+
+		m_ReAttackCount			= 0,
+		m_fReAttackGap			= 0,
+		
+		-- m_listDefenderHitBuff =
+		-- {
+		-- 	{
+		-- 		m_HitBuff                 = "DEBUFF_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_SKILL",
+		-- 	},
+		-- },
+
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_HCM_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX	= 800,
+		m_BackSpeedJumpY= 1200,
+
+		m_ReAttackCount			= 0,
+		m_fReAttackGap			= 0,
+
+		m_fCoolTimeDamage     = 30,
+
+		-- m_listDefenderHitBuff =
+		-- {
+		-- 	{
+		-- 		m_HitBuff                 = "DEBUFF_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_SKILL",
+		-- 	},
+		-- },
+
+		m_HitEffect 	= "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_HYPER1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX		= 250,	
+		m_ReAttackCount		= 3,
+		m_fReAttackGap		= 0.2,
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_GREEN",
+	},
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_HYPER1_END",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX		= 1200,	
+		m_BackSpeedJumpY	= 1000,
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_GREEN",
+	},
+	{
+		m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_DOWN",
+		m_ReActType 			= "NRT_DAMAGE_DOWN",
+
+		m_BackSpeedX		= 300,
+		m_BackSpeedJumpY	= 400,
+
+		m_HitEffect 	= "AB_FX_HIT_GUN_A_GREEN",
+	},
+--* 스캐빈저 다이브 브루탈
+	{
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_DIVE_BEAST_MELEE_TRANS_ATTACK1",
+		m_ReActType                 = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel      = "NSAL_NO",
+
+		m_BackSpeedX                = 150,
+		m_BackSpeedJumpY            = 300,
+		m_ReAttackCount             = 1,
+		m_fReAttackGap              = 0.0,
+		m_fStopTimeDef              = 0.1,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName              = "FX_COMBAT_MONSTER_HIT_BIG",
+	},
+	{
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_DIVE_BEAST_MELEE_TRANS_SKILL1",
+		m_ReActType                 = "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_BackSpeedX                = 1800,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_STING_SMALL",
+	},
+	{
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_DIVE_BEAST_MELEE_TRANS_SKILL1_2",
+		m_ReActType                 = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_BackSpeedX                = 300,
+		m_BackSpeedJumpY            = 1200,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+	},
+	{
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_DIVE_BEAST_MELEE_TRANS_HYPER1",
+		m_ReActType                 = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_BackSpeedX                = 300,
+		m_BackSpeedJumpY            = 1800,
+		m_fStopTimeDef              = 0.1,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 스캐빈저 다이브 비홀더
+	{
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_DIVE_BEAST_RANGE_TRANS_ATTACK1",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_NO",
+
+		m_BackSpeedX                = 700,
+		m_ReAttackCount             = 1,
+		m_fReAttackGap              = 0.0,
+		m_fStopTimeDef              = 0.1,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName              = "FX_COMBAT_MONSTER_HIT_BIG",
+	},
+	{
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_DIVE_BEAST_RANGE_TRANS_SKILL1",
+		m_ReActType                 = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_BackSpeedX                = 300,
+		m_BackSpeedJumpY            = 1200,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_02",
+
+	},
+	{
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_DIVE_BEAST_RANGE_TRANS_HYPER1",
+		m_ReActType                 = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_BackSpeedX                = 1000,
+		m_BackSpeedJumpY            = 100,
+		m_ReAttackCount             = 2,
+		m_fReAttackGap              = 0.1,
+
+		m_HitSoundName              = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_02",
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_DIVE_BEAST_RANGE_TRANS_MIST",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 0,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_EP6_BEAST_RANGE_MAD_POISON",
+			},
+		},
+	},
+--* 스캐빈저 글리치 (유닛)
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_CUTLASS_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_NO",
+
+		m_BackSpeedX = 50,
+
+		m_ReAttackCount             = 3,
+		m_fReAttackGap              = 0.15,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+		m_HitEffectAir = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_CUTLASS_PASSIVE",
+		m_ReActType = "NRT_DAMAGE_A",
+		-- m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX = 75,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_hit_explosion_fire_small",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_CUTLASS_PASSIVE_MECHA",
+		m_ReActType = "NRT_NO_ACTION",
+
+		m_BackSpeedX = 0,
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_CUTLASS_PASSIVE_MECHA_LV5",
+		m_ReActType = "NRT_NO_ACTION",
+
+		m_BackSpeedX = 0,
+	},
+--* 스캐빈저 오버플로 (유닛)
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_HAMMER_PASSIVE",
+		m_ReActType = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_BackSpeedJumpY	= 600,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_HAMMER_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_NO",
+
+		m_BackSpeedX = 150,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_HAMMER_ATTACK1_STUN",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_NO",
+
+		m_BackSpeedX = 150,
+
+		m_fStunTime				= 2.0,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_HAMMER_SKILL1",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX = 1200,
+		m_ReAttackCount     = 2,
+		m_fReAttackGap      = 0.15,
+
+		m_fCameraCrashGap 	= 5,
+		m_fCameraCrashTime 	= 0.2,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_HAMMER_SKILL1_LV5",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX = 1200,
+		m_ReAttackCount     = 2,
+		m_fReAttackGap      = 0.15,
+		
+		m_fCameraCrashGap 	= 5,
+		m_fCameraCrashTime 	= 0.2,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_UNIT_SCAVENGER_S_HAMMER_SKILL",
+			},
+		},
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_HAMMER_SKILL1_END",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX        = 800,
+		-- m_BackSpeedJumpY	= 800,
+
+		m_fStunTime				= 2.0,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_UNIT_SCAVENGER_S_HAMMER_SKILL1_END_LV5",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX        = 800,
+		-- m_BackSpeedJumpY	= 800,
+
+		m_fStunTime				= 3.0,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 스캐빈저 다이브 보스 이볼브 원
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_ATTACK1",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 50,	
+
+		-- m_HitEffect 	= "",
+		-- m_HitEffectAir 	= "",
+
+		m_ReAttackCount		= 5,
+		m_fReAttackGap		= 0.1,
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+
+		-- m_listDefenderHitBuff =
+		-- {
+		-- 	{
+		-- 		m_HitBuff = "DEBUFF_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_ATTACK1",
+		-- 		m_HitBuffBaseLevel = 5,
+		-- 	},
+		-- },
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_ATTACK2",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX	= 150,
+		m_ReAttackCount = 2,
+		m_fReAttackGap	= 0.1,
+		
+
+		-- m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		
+		m_fCameraCrashGap = 10,
+		m_fCameraCrashTime = 0.5,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_ATTACK2",
+				m_HitBuffBaseLevel = 5,
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_PASSIVE",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		
+		m_BackSpeedJumpY			= 800,
+		-- m_BackSpeedKeepTimeJumpY	= 0.6,
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_DeleteBuffCount 	    = 3,
+
+		m_BackSpeedX			= 100,	
+		m_fStopTimeDef 			= 0.3,
+		m_fStopReserveTimeDef 	= 0.2,
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_SKILL1_END",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX		= 1000,
+		m_BackSpeedJumpY	= 1500,	
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_HYPER1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_fStopTimeDef 			= 0.3,
+		m_fStopReserveTimeDef 	= 0.2,
+		m_HitEffect = "AB_FX_hit_explosion_fire_small",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_HYPER1_END",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX		= 150,
+		m_BackSpeedJumpY	= 600,
+
+		m_ReAttackCount		= 2,
+		m_fReAttackGap		= 0.1,
+		m_HitEffect = "AB_FX_hit_explosion_fire_small",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_PASSIVE_LOOP",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+		
+		m_BackSpeedX		    = -800,
+		m_ReAttackCount	        = 3,
+		m_fReAttackGap          = 0.3,
+		-- m_BackSpeedKeepTimeJumpY	= 0.6,
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_PASSIVE_END",
+		m_ReActType 			= "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+		
+		m_BackSpeedX		    = 1000,
+		m_BackSpeedJumpY	    = 600,
+		m_bCrashBarrier		    = true,
+		m_DeleteBuffCount 	    = 2,
+
+		-- m_BackSpeedKeepTimeJumpY	= 0.6,
+		m_HitEffect = "AB_FX_hit_explosion_fire",
+		m_HitEffectAir = "AB_FX_hit_explosion_fire_small",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_PASSIVE_END_KILL",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+		
+		m_fInstantKillHPRate    = 1.01,
+		m_BackSpeedX		    = 0,
+
+		m_NKMKillFeedBack	=
+		{
+			m_fHPRate = 0.02,
+		},
+
+		-- m_BackSpeedKeepTimeJumpY	= 0.6,
+		m_HitEffect = "AB_FX_hit_explosion_fire",
+		m_HitEffectAir = "AB_FX_hit_explosion_fire_small",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_HYPER1_END",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX		= 600,
+		m_BackSpeedJumpY	= 800,
+
+		m_ReAttackCount		= 3,
+		m_fReAttackGap		= 0.1,
+		m_HitEffect = "AB_FX_hit_explosion_fire_small",
+	},
+--* 크로노스 베타
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_BETA_ATTACK1",
+		m_ReActType 			= "NRT_NO_ACTION",
+
+		m_BackSpeedX	= 50,	
+
+		-- m_HitEffect 	= "",
+		-- m_HitEffectAir 	= "",
+
+		m_ReAttackCount		= 5,
+		m_fReAttackGap		= 0.1,
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_BETA_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX			= 100,	
+
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_BETA_SKILL1_END",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX		= 1000,
+		m_BackSpeedJumpY	= 1500,	
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_BETA_PASSIVE",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		
+		m_NKMKillFeedBack	=
+		{
+			m_fHPRate = 0.03,
+		},
+
+		m_BackSpeedJumpY			= 800,
+		-- m_BackSpeedKeepTimeJumpY	= 0.6,
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--* 몬스터 스캐빈저 글리치 (유닛)
+	{
+		m_DamageTempletName = "DT_NKM_MOB_SCAVENGER_S_CUTLASS_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_NO",
+
+		m_BackSpeedX = 50,
+
+		m_ReAttackCount             = 4,
+		m_fReAttackGap              = 0.15,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+		m_HitEffectAir = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_SCAVENGER_S_CUTLASS_PASSIVE",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX = 75,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_hit_explosion_fire_small",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_SCAVENGER_S_CUTLASS_PASSIVE_MECHA",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX = 75,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_hit_explosion_fire_small",
+	},
+--* 몬스터 스캐빈저 오버클로 (유닛)
+	{
+		m_DamageTempletName = "DT_NKM_MOB_SCAVENGER_S_HAMMER_PASSIVE",
+		m_ReActType = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_BackSpeedJumpY	= 600,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_SCAVENGER_S_HAMMER_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_NO",
+
+		m_BackSpeedX = 150,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_SCAVENGER_S_HAMMER_ATTACK1_STUN",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_NO",
+
+		m_BackSpeedX = 150,
+
+		m_fStunTime				= 2.0,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_SCAVENGER_S_HAMMER_SKILL1",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX = 1200,
+		m_ReAttackCount     = 2,
+		m_fReAttackGap      = 0.15,
+
+
+		-- m_fStopTimeDef 			= 0,
+		-- m_fStopReserveTimeDef 	= 0,
+
+		m_fCameraCrashGap 	= 5,
+		m_fCameraCrashTime 	= 0.2,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_SCAVENGER_S_HAMMER_SKILL1_END",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX        = 1200,
+		-- m_BackSpeedJumpY	= 800,
+
+		m_fStunTime				= 3.0,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 스캐빈저 광폭 중형 가시탑
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_DIVE_GRAVE_MAD_MIST",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_NO",
+
+		m_BackSpeedX = 150,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 스캐빈저 다이브 로조
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SCAVENGER_S_HAMMER_ATTACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_NO",
+
+		m_BackSpeedX = 250,
+		
+		--m_HitSoundName = "",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SCAVENGER_S_HAMMER_HYPER1",
+		m_ReActType = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_BackSpeedX = 1400,
+		m_BackSpeedJumpY	= 1200,
+		m_ReAttackCount     = 2,
+		m_fReAttackGap      = 0.15,
+		
+		m_fCameraCrashGap 	= 5,
+		m_fCameraCrashTime 	= 0.2,
+		
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SCAVENGER_S_HAMMER_HYPER1_END",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+
+		m_BackSpeedX        = 900,
+		-- m_BackSpeedJumpY	= 800,
+
+		m_fStunTime				= 3.0,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SCAVENGER_S_HAMMER_SKILL2",
+		m_ReActType = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+
+		m_BackSpeedX        = 600,
+		-- m_BackSpeedJumpY	= 1000,
+
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SMASH_SMALL_07",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 스캐빈저 스피어
+	{
+		m_DamageTempletName = "DT_NKM_MOB_NORMAL_DIVE_STATE_BOMBER_ATTACK1",
+		m_ReActType = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedJumpY 	= 0,
+		
+		m_fCameraCrashGap 	= 0,
+		m_fCameraCrashTime 	= 0.3,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 여름 이벤트 2021 펭귄 모네
+	{
+		m_DamageTempletName = "DT_NKM_MOB_NORMAL_SUMMER2021_PG_TONFA_ATTACK1",
+		m_ReActType 		= "NRT_NO_ACTION",
+		
+		m_BackSpeedX		= 100,
+
+		m_HitEffect 		= "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitSoundName		= "FX_COMBAT_ALL_HIT_COMIC",
+		-- m_HitSoundName		= "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_fLocalVol         = 0.5,
+	},
+--* 여름 이벤트 2021 거대 모네
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUMMER2021_PG_TONFA_ATTACK1",
+		m_ReActType 		= "NRT_NO_ACTION",
+
+		m_BackSpeedX		= 150,
+		m_HitEffect 		= "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitSoundName		= "FX_COMBAT_ALL_HIT_COMIC",
+		-- m_HitSoundName		= "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_fLocalVol         = 0.5,
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUMMER2021_PG_TONFA_SKILL1",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedJumpY	= 800,	
+
+		m_HitEffect 		= "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitSoundName		= "FX_COMBAT_ALL_HIT_COMIC",
+		-- m_HitSoundName		= "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_fLocalVol         = 0.5,
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUMMER2021_PG_TONFA_HYPER1",
+		m_ReActType 		= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_HYPER",
+
+		m_BackSpeedX		= 300,
+		m_HitEffect 		= "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitSoundName		= "FX_COMBAT_ALL_HIT_COMIC",
+		-- m_HitSoundName		= "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_fLocalVol         = 0.5,
+	},
+--* 여름 이벤트 2021 론리
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_SUMMER2021_ETC_S_DOCTOR_ATTACK1",
+		m_ReActType 			= "NRT_NO_ACTION",
+		m_HitEffect 			= "AB_FX_MEDIC_ATK_HIT",
+		m_HitEffectAir			= "AB_FX_MEDIC_ATK_HIT",
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_SUMMER2021_ETC_S_DOCTOR_SKILL1",
+		m_ReActType 			= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_fStopTimeDef 			= 0.5,
+		m_fStopReserveTimeDef	= 0.2,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_MOB_BOSS_SUMMER2021_ETC_S_DOCTOR_SKILL",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+	{
+		m_DamageTempletName 	= "DT_NKM_MOB_BOSS_SUMMER2021_ETC_S_DOCTOR_PASSIVE1",
+		m_ReActType 			= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		-- m_fStopTimeDef 			= 0.3,
+
+		m_BackSpeedX		= 1600,
+		m_BackSpeedJumpY	= 1000,	
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_MOB_BOSS_SUMMER2021_ETC_S_DOCTOR_PASSIVE",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+--* 여름 이벤트 2021 모더레이터
+	{--* 일반공격1
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_SUMMER2021_MODERATOR_TYPE_A_ATTACK1",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_NO",
+
+		m_BackSpeedX                = 500,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_BOSS_FIERCE_MODERATOR_TYPE_AB_DEF_DOWN",
+				m_HitBuffBaseLevel        = 2,
+			},
+		},
+	},
+	{--* 일반공격2
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_SUMMER2021_MODERATOR_TYPE_A_ATTACK2",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_NO",
+
+		m_BackSpeedX                = 300,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_BOSS_FIERCE_MODERATOR_TYPE_AB_DEF_DOWN",
+				m_HitBuffBaseLevel        = 2,
+			},
+		},
+	},
+	{--* 스캔
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_SUMMER2021_MODERATOR_TYPE_A_SKAN1",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--* 특수기1
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_SUMMER2021_MODERATOR_TYPE_A_SKILL1",
+		m_ReActType                 = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_BackSpeedJumpY            = 800,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--* 궁극기1
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_SUMMER2021_MODERATOR_TYPE_A_HYPER1",
+		m_ReActType                 = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+
+		m_BackSpeedX                = 1600,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--* 패턴1 A
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_SUMMER2021_MODERATOR_TYPE_A_PATTERN1_A",
+		m_ReActType                 = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+		m_bCrashBarrier             = true,
+
+		m_BackSpeedX                = 1200,
+		m_ReAttackCount             = 2,
+		m_fReAttackGap              = 10/30,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--* 패턴1 B
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_SUMMER2021_MODERATOR_TYPE_A_PATTERN1_B",
+		m_ReActType                 = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel      = "NSAL_HYPER",
+		m_bCrashBarrier             = true,
+
+		m_BackSpeedX                = 2400,
+
+		m_HitEffect                 = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{--* 특수기1 연막
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_SUMMER2021_MODERATOR_TYPE_A_SKILL1_SMOKE",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_NO",
+
+		m_HitEffect                 = "AB_FX_DUMMY",
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_BOSS_FIERCE_MODERATOR_TYPE_A_HIT_DOWN",
+				m_HitBuffBaseLevel        = 5,
+			},
+		},
+	},
+--* 여름 이벤트 2021 거대 링컨
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUMMER2021_STATE_TANK_ATACK1",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX = 150,
+
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.15,
+		
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUMMER2021_STATE_TANK_ATACK1_END",
+		m_ReActType = "NRT_DAMAGE_A",
+		
+		m_BackSpeedX = 300,
+
+		m_fCameraCrashGap = 0,
+		m_fCameraCrashTime = 0.15,
+		
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUMMER2021_STATE_TANK_ATACK2",
+		m_ReActType = "NRT_NO_ACTION",
+		
+		m_BackSpeedX 	= 50,
+		
+		m_ReAttackCount = 7,
+		m_fReAttackGap 	= 0.1,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_GUN_FIRE_SMALL",
+		m_HitEffect = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_SUMMER2021_STATE_TANK_SKILL1",
+		m_ReActType = "NRT_DAMAGE_B",
+		
+		m_BackSpeedX = 800,
+
+		m_ReAttackCount = 3,
+		m_fReAttackGap 	= 0.2,
+		
+		-- m_HitSoundName = "FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL_02",
+		-- m_HitEffect = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* 여름 이벤트 2021 이수연
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_ATTACK1",
+		m_ReActType 		= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX 		= 100,
+		
+		m_fStopTimeDef 			= 0.1,
+		m_fStopReserveTimeDef 	= 0.05,
+		
+		m_fCameraCrashGap 	= 0,
+		m_fCameraCrashTime	= 0.2,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_ATTACK1_END",
+		m_ReActType 		= "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_SKILL1",
+		m_ReActType 		= "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedX 		= 0,
+		
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime	= 0.2,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_SKILL1_RAPID",
+		m_ReActType 		= "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_ReAttackCount 	= 3,
+		m_fReAttackGap 		= 0.1,
+		m_BackSpeedX 		= 0,
+		
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime	= 0.4,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_SKILL1_UP",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_ReAttackCount 	= 3,
+		m_fReAttackGap 		= 0.1,
+		m_BackSpeedJumpY 	= 1000,
+		
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime	= 0.4,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_SKILL1_RAPID_AIR",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_ReAttackCount 	= 4,
+		m_fReAttackGap 		= 0.1,
+		m_BackSpeedJumpY 	= 200,
+		
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime	= 0.4,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_SKILL1_DOWN",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_SKILL",
+		
+		m_BackSpeedJumpY 	= 1500,
+		
+		m_fCameraCrashGap 	= 10,
+		m_fCameraCrashTime	= 0.5,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_HYPER1",
+		m_ReActType 		= "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_BackSpeedX 	= 0,
+		m_fStopTimeDef 	= 0.5,
+		m_fStopReserveTimeDef = 0.2,
+		m_fCameraCrashGap 	= 20,
+
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_HYPER1_RAPID",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_ReAttackCount 	= 3,
+		m_fReAttackGap 		= 0.1,
+		m_BackSpeedJumpY 	= 400,
+		
+		m_fCameraCrashGap 	= 20,
+		m_fCameraCrashTime	= 0.3,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_BLADE_BIG",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName	= "DT_NKM_MOB_BOSS_SUMMER2021_ADMIN_LEE_SUYEON_HYPER1_END",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		
+		m_BackSpeedJumpY 	= 1500,
+		m_fCameraCrashGap 	= 20,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_02",
+		m_HitEffect = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{--* 여름 이벤트 2021 머신갑 평타 (0.1)
+		m_DamageTempletName         = "DT_NKM_MOB_ELITE_SUMMER2021_MACHINE_GAP_TOWER",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_INVALID",
+
+		m_BackSpeedX                = 50,
+		m_BackSpeedJumpY            = 0,
+
+		m_HitEffect                 = "AB_FX_HIT_GUN_A_ORANGE",
+		m_HitEffectAir              = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{--* 여름 이벤트 2021 머신갑 평타 (1.5)
+		m_DamageTempletName         = "DT_NKM_MOB_ELITE_SUMMER2021_MACHINE_GAP_SHIP",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_INVALID",
+
+		m_BackSpeedX                = 50,
+		m_BackSpeedJumpY            = 0,
+
+		m_HitEffect                 = "AB_FX_HIT_GUN_A_ORANGE",
+		m_HitEffectAir              = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+--! 메인스트림 EP7
+--* EP7 타이런트 소드
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_TYRANT_STRIKER_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_TYRANT_STRIKER_ATTACK1_END",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_FIERCE_TYRANT_STRIKER_PASSIVE1_N",
+				m_HitBuffBaseLevel        = 1,
+			},
+		},
+	},
+--* EP7 루크레시아
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_KNIGHT_C_HOLY_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 150,
+
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_KNIGHT_C_HOLY_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 150,
+		m_ReAttackCount           = 1,
+		m_fReAttackGap            = 0/30,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_MOB_BOSS_EP7_KNIGHT_C_HOLY_SKILL1",
+				m_HitBuffBaseLevel        = 20,
+			},
+		},
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_PURPLE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_KNIGHT_C_HOLY_SKILL1_END",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 800,
+		m_ReAttackCount           = 1,
+		m_fReAttackGap            = 0/30,
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_PURPLE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_KNIGHT_C_HOLY_HYPER1",
+		m_ReActType               = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 150,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 5/30,
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_KNIGHT_C_HOLY_HYPER1_END",
+		m_ReActType               = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 150,
+		m_BackSpeedJumpY          = 700,
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 5/30,
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_ORANGE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_MOB_BOSS_EP7_KNIGHT_C_HOLY_HYPER1",
+				m_HitBuffBaseLevel        = 15,
+			},
+		},
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_KNIGHT_C_HOLY_PATTER1",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_SUPER",
+		
+		m_BackSpeedX              = 150,
+		m_BackSpeedJumpY          = 600,
+		
+		m_fStopReserveTimeDef     = 0.1,
+		m_fStopTimeDef            = 0.2,
+		m_DeleteBuffCount         = 1,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_KNIGHT_C_HOLY_PATTER1_END",
+		m_ReActType               = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel    = "NSAL_SUPER",
+
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 000,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_KNIGHT_C_HOLY_PATTER1_KILL",
+		m_ReActType               = "NRT_DAMAGE_DOWN",
+		m_CrashSuperArmorLevel    = "NSAL_SUPER",
+
+		m_BackSpeedX              = 0,
+		m_BackSpeedJumpY          = 000,
+
+		m_fInstantKillHPRate      = 1.01,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* EP7 기사
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_NORMAL_PALADIN_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+		m_BackSpeedX              = 50,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_fLocalVol               = 0.5,
+	},
+--* EP7 군종 마법사
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_NORMAL_MAGE_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 50,
+
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+		m_fLocalVol               = 0.5,
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_NORMAL_MAGE_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 150,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_ELECTRIC_BIG_02",
+	},
+--* EP7 기사대장
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 100,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_fLocalVol               = 0.5,
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_ATTACK2",
+		m_ReActType               = "NRT_DAMAGE_A",
+
+		m_BackSpeedX              = 600,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_fLocalVol               = 0.5,
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 1500,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_HYPER1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		
+		m_BackSpeedX              = 300,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_HYPER1_END",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 400,
+		m_BackSpeedJumpY          = 600,
+
+		m_ReAttackCount 	= 3,
+		m_fReAttackGap 		= 0.1,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* EP7 침식된 기사대장
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_TRANS_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 100,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_fLocalVol               = 0.5,
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_TRANS_ATTACK2",
+		m_ReActType               = "NRT_DAMAGE_A",
+
+		m_BackSpeedX              = 600,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_SLASH_SMALL",
+		m_fLocalVol               = 0.5,
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_TRANS_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 300,
+		m_BackSpeedJumpY          = 600,
+		m_ReAttackCount           = 3,
+		m_fReAttackGap            = 0.1,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_TRANS_HYPER1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+		
+		m_BackSpeedX              = 300,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_PALADIN_TRANS_HYPER1_END",
+		m_ReActType               = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel    = "NSAL_HYPER",
+
+		m_BackSpeedX              = 400,
+		m_BackSpeedJumpY          = 600,
+
+		m_ReAttackCount 	= 3,
+		m_fReAttackGap 		= 0.1,
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_RED",
+	},
+--* EP7 화염 마법사
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_RED_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 50,
+
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+		m_HitEffect               = "AB_FX_HIT_GUN_A_RED",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_RED_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+			
+		m_BackSpeedX              = 150,
+
+		m_ReAttackCount           = 2,
+		m_fReAttackGap            = 0.15,
+
+		m_fCameraCrashGap         = 0,
+		m_fCameraCrashTime        = 0,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_MOB_ELITE_MAGE_RED_SKILL1",
+				m_HitBuffBaseLevel        = 3,
+			},
+		},
+
+		m_HitEffect               = "AB_FX_hit_explosion_fire_small",
+	},
+--* EP7 냉기 마법사
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_BLUE_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 250,
+
+		m_HitEffect               = "AB_FX_HIT_GUN_A_BLUE",
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_ICE_BIG",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_BLUE_SKILL1",
+		m_ReActType               = "NRT_DAMAGE_A",
+		m_CrashSuperArmorLevel    = "NSAL_SKILL",
+
+		m_BackSpeedX              = 0,
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff                 = "DEBUFF_MOB_ELITE_MAGE_BLUE_SKILL1",
+				m_HitBuffBaseLevel        = 25,
+			},
+		},
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* EP7 바람 마법사
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_GREEN_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_GREEN_SKILL1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* EP7 독 마법사
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_PURPLE_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_PURPLE_SKILL1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* EP7 치유 마법사
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_WHITE_ATTACK1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_BackSpeedX              = 180,
+
+		m_HitSoundName            = "FX_COMBAT_ALL_HIT_ENERGY_SMALL",
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_ELITE_MAGE_WHITE_SKILL1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* EP7 용인
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_EP7_JOO_SHI_YOON_SHADOW_SKILL1",
+		m_ReActType 		= "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel	= "NSAL_SKILL",
+
+		m_BackSpeedX		= 0, 
+		m_BackSpeedJumpY	= 800,
+		m_ReAttackCount		= 3,
+		m_fReAttackGap		= 0.15,
+		
+		m_HitEffect 		= "AB_FX_HIT_SLASH_B_RED", 
+	},
+	{
+		m_DamageTempletName = "DT_NKM_MOB_BOSS_EP7_JOO_SHI_YOON_SHADOW_HYPER1",
+		m_ReActType = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel = "NSAL_HYPER",
+		m_fStunTime = 4.0,
+		m_StunIgnoreStyleType	= {"NUST_MECHANIC"},
+		m_fStopTimeDef = 0.4,
+		
+		m_HitSoundName = "FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_BIG_02",
+		m_HitEffect = "AB_fx_hit_explosion_fire",
+	},
+--* EP7 그림자 에스타로사
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_ZODIAC_CHARLOTTE_SHADOW_SKILL1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+	{
+		m_DamageTempletName       = "DT_NKM_MOB_BOSS_EP7_ZODIAC_CHARLOTTE_SHADOW_HYPER1",
+		m_ReActType               = "NRT_NO_ACTION",
+
+		m_HitEffect               = "AB_FX_HIT_SLASH_A_BLUE",
+	},
+--* 챌린지 크로노스
+	{
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_MTC_FUTURE_TITAN_ATTACK1",
+		m_ReActType                 = "NRT_NO_ACTION",
+		m_CrashSuperArmorLevel      = "NSAL_NO",
+
+		m_BackSpeedX                = 150,
+
+		m_HitEffect                 = "AB_FX_HIT_GUN_A_ORANGE",
+	},
+	{
+		m_DamageTempletName         = "DT_NKM_MOB_BOSS_MTC_FUTURE_TITAN_SKILL1",
+		m_ReActType                 = "NRT_DAMAGE_UP",
+		m_CrashSuperArmorLevel      = "NSAL_SKILL",
+
+		m_BackSpeedJumpY            = 400,
+
+		m_HitEffect                 = "AB_FX_HIT_GUN_A_ORANGE",
+
+		m_listDefenderHitBuff =
+		{
+			{
+				m_HitBuff = "DEBUFF_MOB_ELITE_MTC_ADMIN_MACHINEGUN_SKILL2",
+			},
+		},
+	},
+}
