@@ -301,7 +301,7 @@ m_dicNKMDamageEffectTemplet =
 
 				m_FootOnLandChangeState = "DES_BASE2",
 
-				--m_listNKMEventSpeedX = 
+				--m_listNKMEventSpeedX = --! 이부분이 잘못됨
 				--{
 				--  {
 				--    m_bAnimTime       = false,
@@ -742,7 +742,7 @@ m_dicNKMDamageEffectTemplet =
 						m_OffsetJumpYPos = 100,
 					},
 				},
-			--[[ 	--m_listNKMEventAttack = 
+			--[[ 	--m_listNKMEventAttack = --! 이부분이 잘못됨
 				--{
 				--	{
 				--		m_bAnimTime               = false,

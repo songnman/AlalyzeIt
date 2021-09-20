@@ -75,8 +75,8 @@ def ExtractUnitScript(path):
 
 def ExtractDamageTemplet():
 	try:
-		my_file = 'UnitInfo/Damagetemplet.csv'
 		data = LoadData("LUA_DAMAGE_TEMPLET.txt")
+		my_file = 'UnitInfo/Damagetemplet.csv'
 		f = open('temp.csv','w', newline='')
 		writer = csv.writer(f)
 		writer.writerow(["DTName","Key","Value"])
@@ -95,14 +95,63 @@ def ExtractDamageTemplet():
 		os.remove("temp.csv")
 	except Exception as e:
 		print(str(e))
+		
+def ExtractDamageEffectTemplet():
+	# try:
+		data = LoadData("Legacy/LUA_DAMAGE_EFFECT_TEMPLET.txt")
+		my_file = 'UnitInfo/DamageEffectTemplet.csv'
+		f = open('temp.csv','w', newline='')
+		writer = csv.writer(f)
+		writer.writerow(["EffectName","Tag","EventName","EventIndex","Key","Value"])
+		this = ["DieEvent"]
+		state_index = 0
+		Effect_Name = None
+		for item in data:
+			for k, v in item.items():
+				if k == "m_DamageEffectID":
+					Effect_Name = v
+					continue
+				if isinstance(v, list):
+					for item in v: #?리스트니까 For문 돌려야됨
+						if isinstance(item, list):
+							continue
+						else:
+							for i, j in item.items():
+								if isinstance(j, list):
+									for item in j:
+										if isinstance(item, dict):
+											tag = "StateEvent"
+											for x, y in item.items():
+												writer.writerow([Effect_Name,tag,i,j.index(item)+1,x,y])
+										else:
+											writer.writerow([Effect_Name,tag,k,0,i,item])
+								else:
+									if "DieEvent" in k:
+										tag = "DieEvent"
+										writer.writerow([Effect_Name,tag,k,0,i,j])
+									else:
+										tag = "StateInfo"
+										writer.writerow([Effect_Name,tag,k,0,i,j])
+				else:
+					tag = "BasicInfo"
+					writer.writerow([Effect_Name,tag,k,0,k,v])
+		f.close()
+		all_filenames = ["temp.csv", my_file]
+		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
+		combined_csv.to_csv( my_file, index=False, encoding='utf-8-sig')
+		os.remove("temp.csv")
+	# except Exception as e:
+	# 	print(str(e))
 
-ExtractDamageTemplet()
+ExtractDamageEffectTemplet()
+# ExtractDamageTemplet()
 
 Templet_Path = "C:\\DOC_leeseunghwan.dev\\CounterSide\\CODE\\CSClient\\Assets\\ASSET_BUNDLE\\AB_SCRIPT\\AB_SCRIPT_UNIT_DATA\\"
 Script_Path = f"{Templet_Path}AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\"
-Unit_Templet = "LUA_UNIT_TEMPLET_BASE.txt"
-Unit1 = "NKM_UNIT_CA_JOO_SHI_YOON.txt"
-Unit2 = "NKM_UNIT_BARCODE_C_SISTER.txt"
+
+Unit_Templet = "Legacy/LUA_UNIT_TEMPLET_BASE.txt"
+Unit1 = "Legacy/NKM_UNIT_CA_JOO_SHI_YOON.txt"
+Unit2 = "Legacy/NKM_UNIT_BARCODE_C_SISTER.txt"
 
 # print(join(Templet_Path,Unit_Templet))
 # print(join(Script_Path,Unit1))
