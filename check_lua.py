@@ -1,13 +1,14 @@
-from ntpath import join
 import luadata
 import re
 import csv
 import pandas as pd
 import os.path
 
+from ntpath import join
 from os import listdir
 from os.path import isfile, join, splitext, exists
 
+if not os.path.isdir('UnitInfo'): os.mkdir('UnitInfo') #!폴더 없으면 생성
 def LoadData(path):
 	code = open(path,'r', encoding='utf-8-sig')
 	lines = code.read()
@@ -15,19 +16,17 @@ def LoadData(path):
 	code.close()
 	data = luadata.unserialize(lines,encoding='utf-8-sig')
 	return data
-
 def ExtractUnitScript(path,DataName):
 	try:
-		if exists("temp.csv"):
-			os.remove("temp.csv")
 		my_file = f'UnitInfo/{DataName}Script.csv'
-		
 		if not exists(my_file): #TODO 파일 없을 때 새로 생성하는 부분 개선해야함.
 			f = open(my_file,'w', newline='')
 			writer = csv.writer(f)
 			writer.writerow(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])
 			f.close()
 		
+		if exists("temp.csv"):
+			os.remove("temp.csv")
 		f = open("temp.csv",'w', newline='')
 		writer = csv.writer(f)
 		writer.writerow(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])
@@ -82,12 +81,20 @@ def Writing(path):
 	return content
 def ExtractDamageTemplet(path):
 	try:
-		data = LoadData(path)
 		my_file = 'UnitInfo/Damagetemplet.csv'
+		if not exists(my_file):
+			f = open(my_file,'w', newline='')
+			writer = csv.writer(f)
+			writer.writerow(["DTName","Key","Value"])
+			f.close()
+		
+		if exists("temp.csv"):
+			os.remove("temp.csv")
 		f = open('temp.csv','w', newline='')
+		
 		writer = csv.writer(f)
 		writer.writerow(["DTName","Key","Value"])
-		state_index = 0
+		data = LoadData(path)
 		for item in data:
 			for k, v in item.items():
 				if k == "m_DamageTempletName":
@@ -104,14 +111,21 @@ def ExtractDamageTemplet(path):
 		print(str(e))
 def ExtractDamageEffectTemplet(path):
 	try:
-		data = LoadData(path)
 		my_file = 'UnitInfo/DamageEffectTemplet.csv'
+		if not exists(my_file):
+			f = open(my_file,'w', newline='')
+			writer = csv.writer(f)
+			writer.writerow(["EffectName","Tag","EventName","EventIndex","Key","Value"])
+			f.close()
+		
+		if exists("temp.csv"):
+			os.remove("temp.csv")
 		f = open('temp.csv','w', newline='')
+		
 		writer = csv.writer(f)
 		writer.writerow(["EffectName","Tag","EventName","EventIndex","Key","Value"])
-		this = ["DieEvent"]
-		state_index = 0
 		Effect_Name = None
+		data = LoadData(path)
 		for item in data:
 			for k, v in item.items():
 				if k == "m_DamageEffectID":
@@ -150,9 +164,7 @@ def ExtractDamageEffectTemplet(path):
 	except Exception as e:
 		print(str(e))
 
-
 ScriptBase_Path = "C:\\DOC_leeseunghwan.dev\\CounterSide\\CODE\\CSClient\\Assets\\ASSET_BUNDLE\\AB_SCRIPT\\"
-
 UnitScript_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\", f) ) and "NKM_UNIT_" in f and splitext(f)[1] == ".txt"]
 ShipScript_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\", f) ) and "NKM_SHIP_" in f and splitext(f)[1] == ".txt"]
 MobScript_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\", f) ) and ("NKM_MONSTER_" in f or "NKM_MOB_" in f or "NKM_SHADOW_" in f) and splitext(f)[1] == ".txt"]
@@ -182,6 +194,7 @@ print("Extract Count :", len(DamageTemplet_Path))
 for path in DamageTemplet_Path:
 	ExtractDamageTemplet(path)
 print("DamageTemplet ExtractDone.")
+
 print("All ExtractDone.")
 
 
