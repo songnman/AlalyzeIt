@@ -56,6 +56,7 @@ def unserialize(raw, encoding="utf-8", multival=False, verbose=False):
 				dct[kv[0]] = kv[1]
 			return dct
 
+	white_list = [b"(", b")", b"+", b"-", b"*", b"/", b"."] #!float issue
 	while pos <= slen:
 		byte_current = None
 		byte_current_is_space = False
@@ -182,7 +183,7 @@ def unserialize(raw, encoding="utf-8", multival=False, verbose=False):
 					key = None
 				data = None
 		elif state == "INT":
-			if byte_current == b".":
+			if byte_current == b"." or byte_current in white_list: #!float issue
 				state = "FLOAT"
 			elif byte_current is None or byte_current < b"0" or byte_current > b"9":
 				data = int(sbins[pos1:pos].decode(encoding))
@@ -197,12 +198,12 @@ def unserialize(raw, encoding="utf-8", multival=False, verbose=False):
 					pos = pos - 1
 				data = None
 		elif state == "FLOAT":
-			if byte_current is None or byte_current < b"0" or byte_current > b"9":
+			if (byte_current is None or byte_current < b"0" or byte_current > b"9") and not byte_current in white_list: #!float issue
 				if pos == pos1 + 1 and sbins[pos1:pos] == b".":
 					errmsg = "unexpected dot."
 					break
 				else:
-					data = float(sbins[pos1:pos].decode(encoding))
+					data = (sbins[pos1:pos].decode(encoding)) #!float issue
 					if component_name == "KEY":
 						key = data
 						state = "KEY_EXPRESSION_FINISH"
@@ -347,7 +348,7 @@ def unserialize(raw, encoding="utf-8", multival=False, verbose=False):
 		errmsg = "nothing can be unserialized from input string."
 	if errmsg is not None:
 		pos = min(pos, slen)
-		start_pos = max(0, pos - 4)
+		start_pos = max(0, pos - 40)
 		end_pos = min(pos + 10, slen)
 		err_parts = sbins[start_pos:end_pos].decode(encoding)
 		err_indent = " " * (pos - start_pos)

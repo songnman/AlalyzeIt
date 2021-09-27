@@ -11,11 +11,7 @@ from os.path import isfile, join, splitext
 def LoadData(path):
 	code = open(path,'r', encoding='utf-8-sig')
 	lines = code.read()
-	lines = re.sub('--.+', '', lines)
-	lines = lines.replace(' ','')
-	lines = lines.replace('\t','')
-	lines = lines.replace('\n','')
-	lines = lines.replace('/','/')
+	lines = re.sub('--.*', '', lines)
 	code.close()
 	data = luadata.unserialize(lines,encoding='utf-8-sig')
 	return data
@@ -23,6 +19,7 @@ def LoadData(path):
 def ExtractUnitScript(path):
 	try:
 		my_file = 'UnitInfo/TEST1.csv'
+		
 		# if os.path.exists(my_file):
 		# 	os.remove(my_file)
 		# f = open(my_file,'w', newline='')
@@ -37,8 +34,6 @@ def ExtractUnitScript(path):
 		StateInfo_List = ["m_StateName"]
 		StateInfo_Avoid_List = ["m_NKM_UNIT_STATE_TYPE"]
 		state_index = 0
-	# for k,v in data:
-	# 	if v["StataName"] == "StateName": break
 		for k, v in data.items():
 			if isinstance(v, list):
 				for item in v: #?리스트니까 For문 돌려야됨
@@ -73,7 +68,7 @@ def ExtractUnitScript(path):
 	except Exception as e:
 		print(path +" : "+ str(e))
 
-def ExtractDamageTemplet():
+def ExtractDamageTemplet(path):
 	try:
 		data = LoadData("LUA_DAMAGE_TEMPLET.txt")
 		my_file = 'UnitInfo/Damagetemplet.csv'
@@ -86,7 +81,6 @@ def ExtractDamageTemplet():
 				if k == "m_DamageTempletName":
 					DT_Name = v
 				else:
-					# print(DT_Name,k,v)
 					writer.writerow([DT_Name,k,v]) #?유닛 정보
 		f.close()
 		all_filenames = ["temp.csv", my_file]
@@ -97,7 +91,7 @@ def ExtractDamageTemplet():
 		print(str(e))
 		
 def ExtractDamageEffectTemplet():
-	# try:
+	try:
 		data = LoadData("Legacy/LUA_DAMAGE_EFFECT_TEMPLET.txt")
 		my_file = 'UnitInfo/DamageEffectTemplet.csv'
 		f = open('temp.csv','w', newline='')
@@ -140,8 +134,8 @@ def ExtractDamageEffectTemplet():
 		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
 		combined_csv.to_csv( my_file, index=False, encoding='utf-8-sig')
 		os.remove("temp.csv")
-	# except Exception as e:
-	# 	print(str(e))
+	except Exception as e:
+		print(str(e))
 
 ExtractDamageEffectTemplet()
 # ExtractDamageTemplet()
