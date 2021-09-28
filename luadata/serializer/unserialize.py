@@ -209,6 +209,7 @@ def unserialize(raw, encoding="utf-8", multival=False, verbose=False):
 						state = "KEY_EXPRESSION_FINISH"
 						pos = pos - 1
 					elif component_name == "VALUE":
+						if not "/" in data : data = eval(data)
 						node_entries_append(node, key, data)
 						state = "VALUE_END"
 						key = None

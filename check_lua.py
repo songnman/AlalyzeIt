@@ -66,7 +66,8 @@ def Writing(path):
 										for x, y in item.items():
 											content.append([unit_name,tag,k,state_index,i,j.index(item)+1,x,y])
 									else:
-										content.append([unit_name,tag,k,state_index,i,j.index(item)+1,item,None])
+										tag = "StateInfo"
+										content.append([unit_name,tag,k,state_index,None,j.index(item)+1,i,j])
 								continue
 							elif k in StateSet_List: #?스테이트묶음 종류에 포함될 경우 스테이트묶음
 								tag = "StateSet"
@@ -151,10 +152,10 @@ def ExtractDamageEffectTemplet(path):
 										writer.writerow([Effect_Name,tag,k,0,i,j])
 									else:
 										tag = "StateInfo"
-										writer.writerow([Effect_Name,tag,k,0,i,j])
+										writer.writerow([Effect_Name,tag,None,0,i,j])
 				else:
 					tag = "BasicInfo"
-					writer.writerow([Effect_Name,tag,k,0,k,v])
+					writer.writerow([Effect_Name,tag,None,0,k,v])
 		f.close()
 		all_filenames = ["temp.csv", my_file]
 		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
