@@ -19,11 +19,12 @@ def LoadData(path):
 def ExtractUnitScript(path,DataName):
 	try:
 		my_file = f'UnitInfo/{DataName}Script.csv'
-		if not exists(my_file): #TODO 파일 없을 때 새로 생성하는 부분 개선해야함.
-			f = open(my_file,'w', newline='')
-			writer = csv.writer(f)
-			writer.writerow(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])
-			f.close()
+		if exists(my_file): #TODO 파일 없을 때 새로 생성하는 부분 개선해야함.
+			os.remove(my_file)
+		f = open(my_file,'w', newline='')
+		writer = csv.writer(f)
+		writer.writerow(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])
+		f.close()
 		
 		if exists("temp.csv"):
 			os.remove("temp.csv")
@@ -38,7 +39,7 @@ def ExtractUnitScript(path,DataName):
 		
 		all_filenames = ["temp.csv", my_file]
 		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
-		combined_csv = combined_csv.drop_duplicates(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])
+		# combined_csv = combined_csv.drop_duplicates(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])
 		combined_csv.to_csv( my_file, index=False, encoding='utf-8-sig')
 		os.remove("temp.csv")
 		
@@ -195,6 +196,11 @@ print("Extract Count :", len(DamageTemplet_Path))
 for path in DamageTemplet_Path:
 	ExtractDamageTemplet(path)
 print("DamageTemplet ExtractDone.")
+
+Test_unit_Path = ["C:\\DOC_leeseunghwan.dev\\CounterSide\\CODE\\CSClient\\Assets\\Dev\\ASSET_BUNDLE\\AB_SCRIPT\\AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\NKM_UNIT_HORIZON_M_LOAN.txt"]
+print("Extract Count :", len(Test_unit_Path))
+ExtractUnitScript(Test_unit_Path,"Test")
+print("TestScript ExtractDone.")
 
 print("All ExtractDone.")
 
