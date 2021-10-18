@@ -39,7 +39,7 @@ def ExtractUnitScript(path,DataName):
 		
 		all_filenames = ["temp.csv", my_file]
 		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
-		# combined_csv = combined_csv.drop_duplicates(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])
+		# combined_csv = combined_csv.drop_duplicates(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])#![2021-10-12 10:03:59]Drop 시키면 잃어버리는 데이터가 있음. 주석처리
 		combined_csv.to_csv( my_file, index=False, encoding='utf-8-sig')
 		os.remove("temp.csv")
 		
@@ -47,7 +47,7 @@ def ExtractUnitScript(path,DataName):
 		print(str(e))
 def Writing(path):
 	content = []
-	StateSet_List = ["m_listAttackStateData","m_listSkillStateData","m_listHyperSkillStateData","m_listHitCriticalFeedBack"]
+	StateSet_List = ["m_listAttackStateData","m_listAirAttackStateData","m_listSkillStateData","m_listHyperSkillStateData","m_listHitCriticalFeedBack"]
 	StateInfo_List = ["m_StateName"]
 	StateInfo_Avoid_List = ["m_NKM_UNIT_STATE_TYPE"]
 	state_index = 0
@@ -106,7 +106,7 @@ def ExtractDamageTemplet(path):
 		f.close()
 		all_filenames = ["temp.csv", my_file]
 		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
-		combined_csv = combined_csv.drop_duplicates(["DTName","Key","Value"])
+		# combined_csv = combined_csv.drop_duplicates(["DTName","Key","Value"])#![2021-10-12 10:03:59]Drop 시키면 잃어버리는 데이터가 있음. 주석처리
 		combined_csv.to_csv( my_file, index=False, encoding='utf-8-sig')
 		os.remove("temp.csv")
 	except Exception as e:
@@ -160,7 +160,7 @@ def ExtractDamageEffectTemplet(path):
 		f.close()
 		all_filenames = ["temp.csv", my_file]
 		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
-		combined_csv = combined_csv.drop_duplicates(["EffectName","Tag","EventName","EventIndex","Key","Value"])
+		# combined_csv = combined_csv.drop_duplicates(["EffectName","Tag","EventName","EventIndex","Key","Value"]) #![2021-10-12 10:03:59]Drop 시키면 잃어버리는 데이터가 있음. 주석처리
 		combined_csv.to_csv( my_file, index=False, encoding='utf-8-sig')
 		os.remove("temp.csv")
 	except Exception as e:
@@ -175,32 +175,46 @@ DamageTemplet_Path.reverse()
 DamageEffectTemplet_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) ) and "LUA_DAMAGE_EFFECT_TEMPLET" in f and splitext(f)[1] == ".txt"]
 DamageEffectTemplet_Path.reverse()
 
-print("Extract Count :", len(UnitScript_Path))
+print("UnitScript Extract Count :", len(UnitScript_Path))
 ExtractUnitScript(UnitScript_Path,"Unit")
 print("UnitScript ExtractDone.")
 
-print("Extract Count :", len(ShipScript_Path))
+print("ShipScript Extract Count :", len(ShipScript_Path))
 ExtractUnitScript(ShipScript_Path,"Ship")
 print("ShipScript ExtractDone.")
 
-print("Extract Count :", len(MobScript_Path))
+print("MobScript Extract Count :", len(MobScript_Path))
 ExtractUnitScript(MobScript_Path,"Mob")
 print("MobScript ExtractDone.")
 
-print("Extract Count :", len(DamageEffectTemplet_Path))
-for path in DamageEffectTemplet_Path:
-	ExtractDamageEffectTemplet(path)
-print("DamageEffectTemplet ExtractDone.")
-
-print("Extract Count :", len(DamageTemplet_Path))
+print("DamageTemplet Extract Count :", len(DamageTemplet_Path))
+my_file = 'UnitInfo/Damagetemplet.csv'
+if exists(my_file):
+	os.remove(my_file)
+f = open(my_file,'w', newline='')
+writer = csv.writer(f)
+writer.writerow(["DTName","Key","Value"])
+f.close()
 for path in DamageTemplet_Path:
 	ExtractDamageTemplet(path)
 print("DamageTemplet ExtractDone.")
 
-Test_unit_Path = ["C:\\DOC_leeseunghwan.dev\\CounterSide\\CODE\\CSClient\\Assets\\Dev\\ASSET_BUNDLE\\AB_SCRIPT\\AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\NKM_UNIT_HORIZON_M_LOAN.txt"]
-print("Extract Count :", len(Test_unit_Path))
-ExtractUnitScript(Test_unit_Path,"Test")
-print("TestScript ExtractDone.")
+print("DamageEffectTemplet Extract Count :", len(DamageEffectTemplet_Path))
+my_file = 'UnitInfo/DamageEffectTemplet.csv'
+if exists(my_file):
+	os.remove(my_file)
+f = open(my_file,'w', newline='')
+writer = csv.writer(f)
+writer.writerow(["EffectName","Tag","EventName","EventIndex","Key","Value"])
+f.close()
+for path in DamageEffectTemplet_Path:
+	ExtractDamageEffectTemplet(path)
+print("DamageEffectTemplet ExtractDone.")
+
+# Test_unit_Path = ["C:\\DOC_leeseunghwan.dev\\CounterSide\\CODE\\CSClient\\Assets\\Dev\\ASSET_BUNDLE\\AB_SCRIPT\\AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\NKM_UNIT_HORIZON_M_LOAN.txt"]
+# print("Extract Count :", len(Test_unit_Path))
+# ExtractUnitScript(Test_unit_Path,"Test")
+# print("TestScript ExtractDone.")
 
 print("All ExtractDone.")
 
