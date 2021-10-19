@@ -117,7 +117,7 @@ def ExtractDamageEffectTemplet(path):
 		if not exists(my_file):
 			f = open(my_file,'w', newline='')
 			writer = csv.writer(f)
-			writer.writerow(["EffectName","Tag","EventName","EventIndex","Key","Value"])
+			writer.writerow(["EffectName","Tag","StateIndex","EventName","EventIndex","Key","Value"])
 			f.close()
 		
 		if exists("temp.csv"):
@@ -125,14 +125,17 @@ def ExtractDamageEffectTemplet(path):
 		f = open('temp.csv','w', newline='')
 		
 		writer = csv.writer(f)
-		writer.writerow(["EffectName","Tag","EventName","EventIndex","Key","Value"])
+		writer.writerow(["EffectName","Tag","StateIndex","EventName","EventIndex","Key","Value"])
 		Effect_Name = None
 		data = LoadData(path)
+		StateInfo_List = ["m_StateName"]
+		
 		for item in data:
 			for k, v in item.items():
 				if k == "m_DamageEffectID":
 					Effect_Name = v
 					continue
+				state_index = 0
 				if isinstance(v, list):
 					for item in v: #?리스트니까 For문 돌려야됨
 						if isinstance(item, list):
@@ -144,19 +147,20 @@ def ExtractDamageEffectTemplet(path):
 										if isinstance(item, dict):
 											tag = "StateEvent"
 											for x, y in item.items():
-												writer.writerow([Effect_Name,tag,i,j.index(item)+1,x,y])
+												writer.writerow([Effect_Name,tag,state_index,i,j.index(item)+1,x,y])
 										else:
-											writer.writerow([Effect_Name,tag,k,0,i,item])
+											writer.writerow([Effect_Name,tag,state_index,k,0,i,item])
 								else:
 									if "DieEvent" in k:
 										tag = "DieEvent"
-										writer.writerow([Effect_Name,tag,k,0,i,j])
+										writer.writerow([Effect_Name,tag,state_index,k,0,i,j])
 									else:
 										tag = "StateInfo"
-										writer.writerow([Effect_Name,tag,None,0,i,j])
+										if i in StateInfo_List : state_index += 1
+										writer.writerow([Effect_Name,tag,state_index,None,0,i,j])
 				else:
 					tag = "BasicInfo"
-					writer.writerow([Effect_Name,tag,None,0,k,v])
+					writer.writerow([Effect_Name,tag,state_index,None,0,k,v])
 		f.close()
 		all_filenames = ["temp.csv", my_file]
 		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
@@ -175,17 +179,17 @@ DamageTemplet_Path.reverse()
 DamageEffectTemplet_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) ) and "LUA_DAMAGE_EFFECT_TEMPLET" in f and splitext(f)[1] == ".txt"]
 DamageEffectTemplet_Path.reverse()
 
-print("UnitScript Extract Count :", len(UnitScript_Path))
-ExtractUnitScript(UnitScript_Path,"Unit")
-print("UnitScript ExtractDone.")
+# print("UnitScript Extract Count :", len(UnitScript_Path))
+# ExtractUnitScript(UnitScript_Path,"Unit")
+# print("UnitScript ExtractDone.")
 
-print("ShipScript Extract Count :", len(ShipScript_Path))
-ExtractUnitScript(ShipScript_Path,"Ship")
-print("ShipScript ExtractDone.")
+# print("ShipScript Extract Count :", len(ShipScript_Path))
+# ExtractUnitScript(ShipScript_Path,"Ship")
+# print("ShipScript ExtractDone.")
 
-print("MobScript Extract Count :", len(MobScript_Path))
-ExtractUnitScript(MobScript_Path,"Mob")
-print("MobScript ExtractDone.")
+# print("MobScript Extract Count :", len(MobScript_Path))
+# ExtractUnitScript(MobScript_Path,"Mob")
+# print("MobScript ExtractDone.")
 
 print("DamageTemplet Extract Count :", len(DamageTemplet_Path))
 my_file = 'UnitInfo/Damagetemplet.csv'
@@ -205,7 +209,7 @@ if exists(my_file):
 	os.remove(my_file)
 f = open(my_file,'w', newline='')
 writer = csv.writer(f)
-writer.writerow(["EffectName","Tag","EventName","EventIndex","Key","Value"])
+writer.writerow(["EffectName","Tag","StateIndex","EventName","EventIndex","Key","Value"])
 f.close()
 for path in DamageEffectTemplet_Path:
 	ExtractDamageEffectTemplet(path)
