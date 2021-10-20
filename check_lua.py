@@ -87,7 +87,7 @@ def ExtractDamageTemplet(path):
 		if not exists(my_file):
 			f = open(my_file,'w', newline='')
 			writer = csv.writer(f)
-			writer.writerow(["DTName","Key","Value"])
+			writer.writerow(["DTName","List","ListIndex","Condition","Key","Value"])
 			f.close()
 		
 		if exists("temp.csv"):
@@ -95,14 +95,26 @@ def ExtractDamageTemplet(path):
 		f = open('temp.csv','w', newline='')
 		
 		writer = csv.writer(f)
-		writer.writerow(["DTName","Key","Value"])
+		writer.writerow(["DTName","List","ListIndex","Condition","Key","Value"])
 		data = LoadData(path)
 		for item in data:
 			for k, v in item.items():
 				if k == "m_DamageTempletName":
 					DT_Name = v
 				else:
-					writer.writerow([DT_Name,k,v]) #?유닛 정보
+					if isinstance(v, list):
+						for item in v: #?리스트니까 For문 돌려야됨
+							if isinstance(item, dict):
+								for i, j in item.items():
+									if isinstance(j, dict):
+										for x, y in j.items():
+											writer.writerow([DT_Name,k,v.index(item)+1,i,x,y])
+									else:
+										writer.writerow([DT_Name,k,v.index(item)+1,None,i,j])
+							else:
+								writer.writerow([DT_Name,None,0,None,k,v])
+					else:
+						writer.writerow([DT_Name,None,0,None,k,v])
 		f.close()
 		all_filenames = ["temp.csv", my_file]
 		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
@@ -179,17 +191,17 @@ DamageTemplet_Path.reverse()
 DamageEffectTemplet_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) ) and "LUA_DAMAGE_EFFECT_TEMPLET" in f and splitext(f)[1] == ".txt"]
 DamageEffectTemplet_Path.reverse()
 
-print("UnitScript Extract Count :", len(UnitScript_Path))
-ExtractUnitScript(UnitScript_Path,"Unit")
-print("UnitScript ExtractDone.")
+# print("UnitScript Extract Count :", len(UnitScript_Path))
+# ExtractUnitScript(UnitScript_Path,"Unit")
+# print("UnitScript ExtractDone.")
 
-print("ShipScript Extract Count :", len(ShipScript_Path))
-ExtractUnitScript(ShipScript_Path,"Ship")
-print("ShipScript ExtractDone.")
+# print("ShipScript Extract Count :", len(ShipScript_Path))
+# ExtractUnitScript(ShipScript_Path,"Ship")
+# print("ShipScript ExtractDone.")
 
-print("MobScript Extract Count :", len(MobScript_Path))
-ExtractUnitScript(MobScript_Path,"Mob")
-print("MobScript ExtractDone.")
+# print("MobScript Extract Count :", len(MobScript_Path))
+# ExtractUnitScript(MobScript_Path,"Mob")
+# print("MobScript ExtractDone.")
 
 print("DamageTemplet Extract Count :", len(DamageTemplet_Path))
 my_file = 'UnitInfo/Damagetemplet.csv'
@@ -197,7 +209,7 @@ if exists(my_file):
 	os.remove(my_file)
 f = open(my_file,'w', newline='')
 writer = csv.writer(f)
-writer.writerow(["DTName","Key","Value"])
+writer.writerow(["DTName","List","ListIndex","Condition","Key","Value"])
 f.close()
 for path in DamageTemplet_Path:
 	ExtractDamageTemplet(path)
