@@ -191,17 +191,17 @@ DamageTemplet_Path.reverse()
 DamageEffectTemplet_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) ) and "LUA_DAMAGE_EFFECT_TEMPLET" in f and splitext(f)[1] == ".txt"]
 DamageEffectTemplet_Path.reverse()
 
-# print("UnitScript Extract Count :", len(UnitScript_Path))
-# ExtractUnitScript(UnitScript_Path,"Unit")
-# print("UnitScript ExtractDone.")
+print("UnitScript Extract Count :", len(UnitScript_Path))
+ExtractUnitScript(UnitScript_Path,"Unit")
+print("UnitScript ExtractDone.")
 
-# print("ShipScript Extract Count :", len(ShipScript_Path))
-# ExtractUnitScript(ShipScript_Path,"Ship")
-# print("ShipScript ExtractDone.")
+print("ShipScript Extract Count :", len(ShipScript_Path))
+ExtractUnitScript(ShipScript_Path,"Ship")
+print("ShipScript ExtractDone.")
 
-# print("MobScript Extract Count :", len(MobScript_Path))
-# ExtractUnitScript(MobScript_Path,"Mob")
-# print("MobScript ExtractDone.")
+print("MobScript Extract Count :", len(MobScript_Path))
+ExtractUnitScript(MobScript_Path,"Mob")
+print("MobScript ExtractDone.")
 
 print("DamageTemplet Extract Count :", len(DamageTemplet_Path))
 my_file = 'UnitInfo/Damagetemplet.csv'
