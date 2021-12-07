@@ -62,13 +62,15 @@ def Writing(path):
 						for i, j in item.items():
 							if isinstance(j, list): #?리스트일 경우 스테이트 이벤트
 								tag = "StateEvent"
+								event_index = 0
 								for item in j:
 									if isinstance(item, dict):
+										event_index += 1
 										for x, y in item.items():
-											content.append([unit_name,tag,k,state_index,i,j.index(item)+1,x,y])
+											content.append([unit_name,tag,k,state_index,i,event_index,x,y])
 									else:
 										tag = "StateInfo"
-										content.append([unit_name,tag,k,state_index,None,j.index(item)+1,i,j])
+										content.append([unit_name,tag,k,state_index,None,event_index,i,j])
 								continue
 							elif k in StateSet_List: #?스테이트묶음 종류에 포함될 경우 스테이트묶음
 								tag = "StateSet"
@@ -227,7 +229,7 @@ for path in DamageEffectTemplet_Path:
 	ExtractDamageEffectTemplet(path)
 print("DamageEffectTemplet ExtractDone.")
 
-# Test_unit_Path = ["C:\\DOC_leeseunghwan.dev\\CounterSide\\CODE\\CSClient\\Assets\\Dev\\ASSET_BUNDLE\\AB_SCRIPT\\AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\NKM_UNIT_HORIZON_M_LOAN.txt"]
+# Test_unit_Path = ["C:\\DOC_leeseunghwan.dev\\CounterSide\\CODE\\CSClient\\Assets\\ASSET_BUNDLE\\AB_SCRIPT\\AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\NKM_UNIT_C_ALPHA_JIA.txt"]
 # print("Extract Count :", len(Test_unit_Path))
 # ExtractUnitScript(Test_unit_Path,"Test")
 # print("TestScript ExtractDone.")
