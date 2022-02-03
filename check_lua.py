@@ -1,3 +1,4 @@
+from operator import indexOf
 import luadata
 import re
 import csv
@@ -50,17 +51,20 @@ def Writing(path):
 	StateSet_List = ["m_listAttackStateData","m_listAirAttackStateData","m_listSkillStateData","m_listHyperSkillStateData","m_listHitCriticalFeedBack"]
 	StateInfo_List = ["m_StateName"]
 	StateInfo_Avoid_List = ["m_NKM_UNIT_STATE_TYPE"]
+	StateInitData_List = ["m_listPhaseChangeData", "m_listAccumStateChangePack", "m_listStaticBuffData"]
 	state_index = 0
 		
 	unit_name = splitext(os.path.basename(path))[0]
 	data = LoadData(path)
 	if data:
 		for k, v in data.items():
+			phase_index = 0
 			if isinstance(v, list):
 				for item in v: #?리스트니까 For문 돌려야됨
 					if item:
+						phase_index += 1
 						for i, j in item.items():
-							if isinstance(j, list): #?리스트일 경우 스테이트 이벤트
+							if isinstance(j, list) and k not in StateInitData_List: #?리스트일 경우 스테이트 이벤트
 								tag = "StateEvent"
 								event_index = 0
 								for item in j:
@@ -74,6 +78,18 @@ def Writing(path):
 								continue
 							elif k in StateSet_List: #?스테이트묶음 종류에 포함될 경우 스테이트묶음
 								tag = "StateSet"
+								
+							elif k in StateInitData_List: #?[2022-01-30 22:51:40]스테이트 관련 데이터일경우.
+								tag = "StateInitData"
+								if isinstance(j, list): #?[2022-01-30 22:51:50]리스트일 경우 어큠스테이트
+									for item in j:
+										if j.index(item) > 0: phase_index += 1 #?[2022-01-31 00:29:06] List index가 1 이상일 경우 어큠스테이트의 구성요소가 2개 이상인 예외처리로 페이즈 인덱스 증가
+										for x, y in item.items():
+											content.append([unit_name,tag,k,state_index,None,phase_index,x,y])
+								else: #?[2022-01-30 22:51:56] 이아니면 페이즈체인지 or Condition  묶음임.
+									content.append([unit_name,tag,k,state_index,None,phase_index,i,j])
+								continue
+								
 							else: #?나머지는 전부 스테이트 정보
 								tag = "StateInfo"
 							if i in StateInfo_List and k not in StateSet_List : state_index += 1 #! 인포셋에 걸리면 스테이트인덱스 증가
