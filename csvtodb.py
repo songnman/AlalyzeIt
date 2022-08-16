@@ -25,6 +25,7 @@ def UpdateToDB(my_file_name,column_list):
         sys.exit(1)
     cur = conn.cursor() #! Get Cursor
     df = pd.read_csv(f'UnitInfo/{my_file_name}.csv') #! Get DataFrame
+    df = df.fillna('')
     item = df.astype(str)  #!STRING으로 변경
     db_itemlist = item.values.tolist() #!  DataFrame to List
     try:
