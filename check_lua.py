@@ -4,6 +4,7 @@ import re
 import csv
 import pandas as pd
 import os.path
+import csvtodb
 
 from ntpath import join
 from os import listdir
@@ -20,18 +21,19 @@ def LoadData(path):
 def ExtractUnitScript(path,DataName):
 	try:
 		my_file = f'UnitInfo/{DataName}Script.csv'
+		column_list = ["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"]
 		if exists(my_file): #TODO 파일 없을 때 새로 생성하는 부분 개선해야함.
 			os.remove(my_file)
 		f = open(my_file,'w', newline='')
 		writer = csv.writer(f)
-		writer.writerow(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])
+		writer.writerow(column_list)
 		f.close()
 		
 		if exists("temp.csv"):
 			os.remove("temp.csv")
 		f = open("temp.csv",'w', newline='')
 		writer = csv.writer(f)
-		writer.writerow(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])
+		writer.writerow(column_list)
 		
 		for p in path:
 			for item in Writing(p):
@@ -40,10 +42,10 @@ def ExtractUnitScript(path,DataName):
 		
 		all_filenames = ["temp.csv", my_file]
 		combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
-		# combined_csv = combined_csv.drop_duplicates(["UnitName","Tag","DictName","StateIndex","EventName","EventIndex","Key","Value"])#![2021-10-12 10:03:59]Drop 시키면 잃어버리는 데이터가 있음. 주석처리
+		# combined_csv = combined_csv.drop_duplicates(column_list)#![2021-10-12 10:03:59]Drop 시키면 잃어버리는 데이터가 있음. 주석처리
 		combined_csv.to_csv( my_file, index=False, encoding='utf-8-sig')
 		os.remove("temp.csv")
-		
+		csvtodb.UpdateToDB(f'{DataName}Script',column_list)
 	except Exception as e:
 		print(str(e))
 def Writing(path):
@@ -102,10 +104,11 @@ def Writing(path):
 def ExtractDamageTemplet(path):
 	try:
 		my_file = 'UnitInfo/Damagetemplet.csv'
+		column_list = ["DTName","List","ListIndex","Condition","Key","Value"]
 		if not exists(my_file):
 			f = open(my_file,'w', newline='')
 			writer = csv.writer(f)
-			writer.writerow(["DTName","List","ListIndex","Condition","Key","Value"])
+			writer.writerow(column_list)
 			f.close()
 		
 		if exists("temp.csv"):
@@ -113,7 +116,7 @@ def ExtractDamageTemplet(path):
 		f = open('temp.csv','w', newline='')
 		
 		writer = csv.writer(f)
-		writer.writerow(["DTName","List","ListIndex","Condition","Key","Value"])
+		writer.writerow(column_list)
 		data = LoadData(path)
 		for item in data:
 			for k, v in item.items():
@@ -139,15 +142,17 @@ def ExtractDamageTemplet(path):
 		# combined_csv = combined_csv.drop_duplicates(["DTName","Key","Value"])#![2021-10-12 10:03:59]Drop 시키면 잃어버리는 데이터가 있음. 주석처리
 		combined_csv.to_csv( my_file, index=False, encoding='utf-8-sig')
 		os.remove("temp.csv")
+		csvtodb.UpdateToDB('Damagetemplet',column_list)
 	except Exception as e:
 		print(str(e))
 def ExtractDamageEffectTemplet(path):
 	try:
 		my_file = 'UnitInfo/DamageEffectTemplet.csv'
+		column_list = ["EffectName","Tag","StateIndex","EventName","EventIndex","Key","Value"]
 		if not exists(my_file):
 			f = open(my_file,'w', newline='')
 			writer = csv.writer(f)
-			writer.writerow(["EffectName","Tag","StateIndex","EventName","EventIndex","Key","Value"])
+			writer.writerow(column_list)
 			f.close()
 		
 		if exists("temp.csv"):
@@ -155,7 +160,7 @@ def ExtractDamageEffectTemplet(path):
 		f = open('temp.csv','w', newline='')
 		
 		writer = csv.writer(f)
-		writer.writerow(["EffectName","Tag","StateIndex","EventName","EventIndex","Key","Value"])
+		writer.writerow(column_list)
 		Effect_Name = None
 		data = LoadData(path)
 		StateInfo_List = ["m_StateName"]
@@ -197,6 +202,7 @@ def ExtractDamageEffectTemplet(path):
 		# combined_csv = combined_csv.drop_duplicates(["EffectName","Tag","EventName","EventIndex","Key","Value"]) #![2021-10-12 10:03:59]Drop 시키면 잃어버리는 데이터가 있음. 주석처리
 		combined_csv.to_csv( my_file, index=False, encoding='utf-8-sig')
 		os.remove("temp.csv")
+		csvtodb.UpdateToDB('DamageEffectTemplet',column_list)
 	except Exception as e:
 		print(str(e))
 
