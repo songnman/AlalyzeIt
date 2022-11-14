@@ -63,7 +63,7 @@ def Writing(path):
 			phase_index = 0
 			if isinstance(v, list):
 				for item in v: #?리스트니까 For문 돌려야됨
-					if item:
+					if isinstance(item, dict): #? [2022-11-15 01:36:39] 리스트 값 대응
 						phase_index += 1
 						for i, j in item.items():
 							if isinstance(j, list) and k not in StateInitData_List: #?리스트일 경우 스테이트 이벤트
@@ -77,6 +77,7 @@ def Writing(path):
 									else:
 										tag = "StateInfo"
 										content.append([unit_name,tag,k,state_index,None,event_index,i,j])
+										break #? [2022-11-15 01:36:39] 리스트 값 대응
 								continue
 							elif k in StateSet_List: #?스테이트묶음 종류에 포함될 경우 스테이트묶음
 								tag = "StateSet"
@@ -97,6 +98,10 @@ def Writing(path):
 							if i in StateInfo_List and k not in StateSet_List : state_index += 1 #! 인포셋에 걸리면 스테이트인덱스 증가
 							if i in StateInfo_Avoid_List and k not in StateSet_List : continue
 							content.append([unit_name,tag,k,state_index,None,0,i,j])
+					else: #? [2022-11-15 01:36:39] 리스트 값 대응
+						tag = "BasicInfo"
+						content.append([unit_name,tag,None,state_index,None,0,k,v])
+						break
 			else:
 				tag = "BasicInfo"
 				content.append([unit_name,tag,None,state_index,None,0,k,v])
