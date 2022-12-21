@@ -5,6 +5,7 @@ import csv
 import pandas as pd
 import os.path
 import csvtodb
+import check_anim_data
 
 from ntpath import join
 from os import listdir
@@ -219,6 +220,7 @@ DamageTemplet_Path = [join(ScriptBase_Path, f) for f in listdir(ScriptBase_Path)
 DamageTemplet_Path.reverse()
 DamageEffectTemplet_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) ) and "LUA_DAMAGE_EFFECT_TEMPLET" in f and splitext(f)[1] == ".txt"]
 DamageEffectTemplet_Path.reverse()
+AnimData_Path = join(f"{ScriptBase_Path}AB_SCRIPT_ANIM_DATA\\", "LUA_ANIM_DATA.txt")
 
 print("UnitScript Extract Count :", len(UnitScript_Path))
 ExtractUnitScript(UnitScript_Path,"Unit")
@@ -256,13 +258,17 @@ for path in DamageEffectTemplet_Path:
 	ExtractDamageEffectTemplet(path)
 print("DamageEffectTemplet ExtractDone.")
 
+print("AnimData Extract")
+check_anim_data.ExtractAnimData(AnimData_Path)
+print("AnimData ExtractDone.")
+
+print("All ExtractDone.")
+
+
 # Test_unit_Path = ["C:\\DOC_leeseunghwan.dev\\CounterSide\\CODE\\CSClient\\Assets\\ASSET_BUNDLE\\AB_SCRIPT\\AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\NKM_UNIT_C_ALPHA_JIA.txt"]
 # print("Extract Count :", len(Test_unit_Path))
 # ExtractUnitScript(Test_unit_Path,"Test")
 # print("TestScript ExtractDone.")
-
-print("All ExtractDone.")
-
 
 # test_path = [
 # "C:\\DOC_leeseunghwan.dev\\CounterSide\\CODE\\CSClient\\Assets\\ASSET_BUNDLE\\AB_SCRIPT\\AB_SCRIPT_UNIT_DATA\\AB_SCRIPT_UNIT_DATA_UNIT_TEMPLET\\NKM_MONSTER_BOSS_BASIC_ADMIN_HILDE_ADMIN_MOVE_H.txt",
