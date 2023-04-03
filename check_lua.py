@@ -6,6 +6,7 @@ import pandas as pd
 import os.path
 import csvtodb
 import check_anim_data
+import check_dungeonScript
 
 from ntpath import join
 from os import listdir
@@ -221,6 +222,7 @@ DamageTemplet_Path.reverse()
 DamageEffectTemplet_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_EFFECT\\", f) ) and "LUA_DAMAGE_EFFECT_TEMPLET" in f and splitext(f)[1] == ".txt"]
 DamageEffectTemplet_Path.reverse()
 AnimData_Path = join(f"{ScriptBase_Path}AB_SCRIPT_ANIM_DATA\\", "LUA_ANIM_DATA.txt")
+DungeonScript_Path = [join(f"{ScriptBase_Path}AB_SCRIPT_DUNGEON_TEMPLET\\AB_SCRIPT_DUNGEON_TEMPLET_ALL\\", f) for f in listdir(f"{ScriptBase_Path}AB_SCRIPT_DUNGEON_TEMPLET\\AB_SCRIPT_DUNGEON_TEMPLET_ALL\\") if isfile(join(f"{ScriptBase_Path}AB_SCRIPT_DUNGEON_TEMPLET\\AB_SCRIPT_DUNGEON_TEMPLET_ALL\\", f) ) and splitext(f)[1] == ".txt"]
 
 print("UnitScript Extract Count :", len(UnitScript_Path))
 ExtractUnitScript(UnitScript_Path,"Unit")
@@ -261,6 +263,10 @@ print("DamageEffectTemplet ExtractDone.")
 print("AnimData Extract")
 check_anim_data.ExtractAnimData(AnimData_Path)
 print("AnimData ExtractDone.")
+
+print("DungeonScript Extract Count :", len(DungeonScript_Path))
+check_dungeonScript.ExtractDungeonScript(DungeonScript_Path)
+print("DungeonScript ExtractDone.")
 
 print("All ExtractDone.")
 
