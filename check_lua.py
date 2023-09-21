@@ -141,6 +141,9 @@ def ExtractDamageTemplet(path):
 										writer.writerow([DT_Name,k,v.index(item)+1,None,i,j])
 							else:
 								writer.writerow([DT_Name,None,0,None,k,v])
+					elif isinstance(v, dict):
+						for i, j in v.items():
+							writer.writerow([DT_Name,k,0,None,i,j])
 					else:
 						writer.writerow([DT_Name,None,0,None,k,v])
 		f.close()
