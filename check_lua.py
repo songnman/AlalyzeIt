@@ -141,7 +141,7 @@ def ExtractDamageTemplet(path):
 										writer.writerow([DT_Name,k,v.index(item)+1,None,i,j])
 							else:
 								writer.writerow([DT_Name,None,0,None,k,v])
-					elif isinstance(v, dict):
+					elif isinstance(v, dict): #![2023-09-21 16:34:17] EventMove 대응함
 						for i, j in v.items():
 							writer.writerow([DT_Name,k,0,None,i,j])
 					else:
